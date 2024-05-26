@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="register-container">
+        <h2>Đăng kí với</h2>
+        <div class="social-buttons">
+            <img src="facebook.png" alt="Facebook">
+            <img src="apple.png" alt="Apple">
+            <img src="google.png" alt="Google">
+        </div>
+        <div class="divider">hoặc</div>
+        <form>
+            <div class="form-group">
+                <label for="name">Họ và tên</label>
+                <input type="text" id="name" placeholder="Họ và tên đầy đủ của bạn">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email của bạn">
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" placeholder="Mật khẩu bạn muốn đặt">
+            </div>
+            <div class="form-group radio-group">
+                <input class="form-check-input" type="checkbox" value="" id="teacher" >
+                <label class="form-check-label" for="teacher">
+                    Giang vien
+                </label>
+                <input class="form-check-input" type="checkbox" value="" id="student">
+                <label class="form-check-label" for="student">
+                    Sinh vien
+                </label>
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Ghi nhớ tôi</label>
+            </div>
+            <button type="submit" class="submit-button">Đăng ký</button>
+        </form>
+    </div>
+</body>
+
+</html>
