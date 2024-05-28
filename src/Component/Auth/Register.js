@@ -1,22 +1,42 @@
-import React from "react";
-import { useState } from "react";
-import "./Login.css";
-import { VscEye, VscEyeClosed } from "react-icons/vsc";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-const Login = () => {
+import "./Register.css";
+import { VscEye, VscEyeClosed } from "react-icons/vsc";
+
+const Register = () => {
   const [isShowPassword, setIsShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
   const navigate = useNavigate();
+
   const handleRegister = () => {
-    navigate("/register");
+    navigate("/login");
   };
+
+  const handleSignIn = () => {
+    navigate("/login");
+  };
+
   return (
     <div>
       <div className="login">
         <div className="login-container">
           <div className="hus-tracking">HusTracking</div>
           <div className="input-section">
+            <div className="name">
+              <label htmlFor="name" className="label">
+                Tên hiển thị
+              </label>
+              <div className="email-input">
+                <input
+                  type="text"
+                  id="name"
+                  className="input-box"
+                  onChange={(event) => setName(event.target.value)}
+                />
+              </div>
+            </div>
             <div className="email">
               <label htmlFor="email" className="label">
                 Email
@@ -35,9 +55,6 @@ const Login = () => {
                 <label htmlFor="password" className="label">
                   Mật khẩu
                 </label>
-                <a href="#" className="forgot-password">
-                  Quên mật khẩu?
-                </a>
               </div>
               <div className="password-input">
                 <input
@@ -54,29 +71,31 @@ const Login = () => {
                 </span>
               </div>
             </div>
-            <div className="remind-me">
-              <input type="checkbox" id="keep-signed-in" className="tick" />
-              <label htmlFor="keep-signed-in" className="keep-me-signed-in">
-                Keep me signed in
-              </label>
+            <div className="terms">
+              By continuing, you agree to our <a href="#">terms of service</a>.
             </div>
-            <button className="button-primary">Đăng nhập</button>
+            <button className="button-primary" onClick={handleRegister}>
+              Đăng ký
+            </button>
             <div className="divider">
               <div className="line-10"></div>
-              <div className="sign-in-with">hoặc đăng nhập với</div>
+              <div className="sign-in-with">hoặc đăng ký với</div>
             </div>
             <button className="button-secondary">
               <img className="google" src="group0.svg" alt="Google icon" />
-              Đăng nhập với google
+              Đăng ký với google
             </button>
           </div>
-          <a href="#" className="create-account" onClick={handleRegister}>
-            Tạo tài khoản
-          </a>
+          <div className="login-link">
+            Bạn đã có tài khoản?{" "}
+            <a href="#" onClick={handleSignIn}>
+              Đăng nhập ở đây
+            </a>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Register;
