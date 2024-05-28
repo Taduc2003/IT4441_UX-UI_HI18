@@ -1,25 +1,33 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./index.css";
+
 const MyComponent = () => {
-  const handleClick = () => {
-    alert("click me");
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate("/login");
+  };
+
+  const handleRegister = () => {
+    navigate("/register");
   };
 
   return (
-    <div className="container">
+    <div className="mycomponent-container">
       <header>
-        <div class="header-nav">
+        <div className="header-nav">
           <nav>
             <ul>
               <li>
-                <a href="#" class="active">
+                <a href="#" className="active">
                   Home
                 </a>
               </li>
               <li>
                 <a href="#">About Me</a>
               </li>
-              <li class="logo">
+              <li className="logo">
                 <h1>HusTracking</h1>
                 <p>Best tracking website</p>
               </li>
@@ -33,14 +41,16 @@ const MyComponent = () => {
           </nav>
         </div>
       </header>
-      <main>
-        <div class="welcome-section">
-          <h3>Chào mừng bạn đến với HusTracking</h3>
-          <p>Nền tảng quản lý KPI hàng đầu cho giảng viên và sinh viên</p>
-          <div class="buttons">
-            <button class="login">Đăng nhập</button>
-            <button class="register">Đăng ký</button>
-          </div>
+      <main className="welcome-section">
+        <h3>Chào mừng bạn đến với HusTracking</h3>
+        <p>Nền tảng quản lý KPI hàng đầu cho giảng viên và sinh viên</p>
+        <div className="buttons">
+          <button className="login-button" onClick={handleLogin}>
+            Đăng nhập
+          </button>
+          <button className="register" onClick={handleRegister}>
+            Đăng ký
+          </button>
         </div>
       </main>
     </div>

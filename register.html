@@ -1,51 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>HusTracking - Đăng nhập</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="register-container">
-        <h2>Đăng kí với</h2>
-        <div class="social-buttons">
-            <img src="facebook.png" alt="Facebook">
-            <img src="apple.png" alt="Apple">
-            <img src="google.png" alt="Google">
+    <div class="login">
+        <div class="login-container">
+            <div class="hus-tracking">HusTracking</div>
+            <div class="input-section">
+                <div class="email">
+                    <label for="email" class="label">Email Address</label>
+                    <input type="email" id="email" class="input-box" value="johndoe@gmail.com" readonly>
+                </div>
+                <div class="password">
+                    <div class="password-header">
+                        <label for="password" class="label">Mật khẩu</label>
+                        <a href="#" class="forgot-password">Quên mật khẩu?</a>
+                    </div>
+                    <div class="password-input">
+                        <input type="password" id="password" class="input-box" value="password" readonly>
+                        <img class="icon-eye" src="icon-eye0.svg" alt="show/hide password">
+                    </div>
+                </div>
+                <div class="remind-me">
+                    <input type="checkbox" id="keep-signed-in" class="tick">
+                    <label for="keep-signed-in" class="keep-me-signed-in">Keep me signed in</label>
+                </div>
+                <button class="button-primary">Đăng nhập</button>
+                <div class="divider">
+                    <div class="line-10"></div>
+                    <div class="sign-in-with">hoặc đăng nhập với</div>
+                </div>
+                <button class="button-secondary">
+                    <img class="google" src="group0.svg" alt="Google icon">
+                    Đăng nhập với google
+                </button>
+            </div>
+            <a href="#" class="create-account">Tạo tài khoản</a>
         </div>
-        <div class="divider">hoặc</div>
-        <form>
-            <div class="form-group">
-                <label for="name">Họ và tên</label>
-                <input type="text" id="name" placeholder="Họ và tên đầy đủ của bạn">
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Email của bạn">
-            </div>
-            <div class="form-group">
-                <label for="password">Mật khẩu</label>
-                <input type="password" id="password" placeholder="Mật khẩu bạn muốn đặt">
-            </div>
-            <div class="form-group radio-group">
-                <input class="form-check-input" type="checkbox" value="" id="teacher" >
-                <label class="form-check-label" for="teacher">
-                    Giang vien
-                </label>
-                <input class="form-check-input" type="checkbox" value="" id="student">
-                <label class="form-check-label" for="student">
-                    Sinh vien
-                </label>
-            </div>
-            <div class="form-group checkbox-group">
-                <input type="checkbox" id="remember-me">
-                <label for="remember-me">Ghi nhớ tôi</label>
-            </div>
-            <button type="submit" class="submit-button">Đăng ký</button>
-        </form>
     </div>
 </body>
 
