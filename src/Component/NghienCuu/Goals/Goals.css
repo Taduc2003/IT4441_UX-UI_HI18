@@ -1,0 +1,250 @@
+.goals {
+    display: flex;
+    flex-direction: column;
+    width: 371px;
+    height: 258px;
+    align-items: flex-start;
+    gap: 8px;
+    position: relative;
+  }
+  
+  .goals .text-wrapper {
+    position: relative;
+    width: 402px;
+    margin-top: -1px;
+    margin-right: -31px;
+    font-family: var(--header-22-32-font-family);
+    font-weight: var(--header-22-32-font-weight);
+    color: var(--gray-02);
+    font-size: var(--header-22-32-font-size);
+    letter-spacing: var(--header-22-32-letter-spacing);
+    line-height: var(--header-22-32-line-height);
+    font-style: var(--header-22-32-font-style);
+  }
+  
+  .goals .content {
+    display: flex;
+    flex-direction: column;
+    width: 371px;
+    height: 258px;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 24px;
+    position: relative;
+    background-color: var(--white);
+    border-radius: 8px;
+    /* box-shadow: var(--shadow-01); */
+    box-shadow: 0em 0em 1em 0em;
+  }
+  
+  .goals .header {
+    display: flex;
+    width: 321px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px 12px;
+    position: relative;
+    flex: 0 0 auto;
+    background-color: transparent;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-left-style: none;
+    border-color: var(--gray-06);
+  }
+  
+  .goals .frame {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .goals .theo-tu-n {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Inter-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: var(--default-black);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 32px;
+    white-space: nowrap;
+  }
+  
+  .goals .chevron-down {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .goals .k {
+    position: relative;
+    width: fit-content;
+    font-family: var(--medium-14-20-font-family);
+    font-weight: var(--medium-14-20-font-weight);
+    color: var(--secondary);
+    font-size: var(--medium-14-20-font-size);
+    text-align: right;
+    letter-spacing: var(--medium-14-20-letter-spacing);
+    line-height: var(--medium-14-20-line-height);
+    white-space: nowrap;
+    font-style: var(--medium-14-20-font-style);
+  }
+  
+  .goals .details {
+    display: flex;
+    width: 321px;
+    height: 128px;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+  }
+  
+  .goals .left-content {
+    display: inline-flex;
+    flex-direction: column;
+    height: 124px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .goals .div-wrapper {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 4px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .goals .text {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .goals .div {
+    position: relative;
+    width: 116px;
+    margin-top: -1px;
+    font-family: var(--regular-12-16-font-family);
+    font-weight: var(--regular-12-16-font-weight);
+    color: var(--gray-02);
+    font-size: var(--regular-12-16-font-size);
+    letter-spacing: var(--regular-12-16-letter-spacing);
+    line-height: var(--regular-12-16-line-height);
+    font-style: var(--regular-12-16-font-style);
+  }
+  
+  .goals .element-gi {
+    position: relative;
+    width: 112px;
+    font-family: var(--bold-16-24-font-family);
+    font-weight: var(--bold-16-24-font-weight);
+    color: var(--default-black);
+    font-size: var(--bold-16-24-font-size);
+    letter-spacing: var(--bold-16-24-letter-spacing);
+    line-height: var(--bold-16-24-line-height);
+    font-style: var(--bold-16-24-font-style);
+  }
+  
+  .goals .target-vs {
+    display: flex;
+    flex-direction: column;
+    width: 175px;
+    height: 95px;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 14px;
+    position: relative;
+  }
+  
+  .goals .graph {
+    gap: 6px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .goals .graph-2 {
+    background-color: #ffffff;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .goals .img {
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .goals .meter {
+    position: absolute;
+    width: 48px;
+    height: 12px;
+    top: 58px;
+    left: 57px;
+  }
+  
+  .goals .target-range {
+    display: flex;
+    width: 144px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .goals .text-wrapper-2 {
+    width: 26px;
+    font-family: var(--medium-12-16-font-family);
+    font-weight: var(--medium-12-16-font-weight);
+    color: var(--gray-04);
+    font-size: var(--medium-12-16-font-size);
+    line-height: var(--medium-12-16-line-height);
+    position: relative;
+    text-align: center;
+    letter-spacing: var(--medium-12-16-letter-spacing);
+    font-style: var(--medium-12-16-font-style);
+  }
+  
+  .goals .text-wrapper-3 {
+    width: 30px;
+    margin-top: -1px;
+    font-family: var(--semibold-16-24-font-family);
+    font-weight: var(--semibold-16-24-font-weight);
+    color: var(--default-black);
+    font-size: var(--semibold-16-24-font-size);
+    line-height: var(--semibold-16-24-line-height);
+    position: relative;
+    text-align: center;
+    letter-spacing: var(--semibold-16-24-letter-spacing);
+    font-style: var(--semibold-16-24-font-style);
+  }
+  
+  .goals .text-wrapper-4 {
+    width: 32px;
+    font-family: var(--medium-12-16-font-family);
+    font-weight: var(--medium-12-16-font-weight);
+    color: var(--gray-04);
+    font-size: var(--medium-12-16-font-size);
+    line-height: var(--medium-12-16-line-height);
+    position: relative;
+    text-align: center;
+    letter-spacing: var(--medium-12-16-letter-spacing);
+    font-style: var(--medium-12-16-font-style);
+  }
+  
