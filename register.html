@@ -1,47 +1,56 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HusTracking - Đăng nhập</title>
+    <title>Sidebar Example</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="login">
-        <div class="login-container">
-            <div class="hus-tracking">HusTracking</div>
-            <div class="input-section">
-                <div class="email">
-                    <label for="email" class="label">Email Address</label>
-                    <input type="email" id="email" class="input-box" value="johndoe@gmail.com" readonly>
-                </div>
-                <div class="password">
-                    <div class="password-header">
-                        <label for="password" class="label">Mật khẩu</label>
-                        <a href="#" class="forgot-password">Quên mật khẩu?</a>
-                    </div>
-                    <div class="password-input">
-                        <input type="password" id="password" class="input-box" value="password" readonly>
-                        <img class="icon-eye" src="icon-eye0.svg" alt="show/hide password">
-                    </div>
-                </div>
-                <div class="remind-me">
-                    <input type="checkbox" id="keep-signed-in" class="tick">
-                    <label for="keep-signed-in" class="keep-me-signed-in">Keep me signed in</label>
-                </div>
-                <button class="button-primary">Đăng nhập</button>
-                <div class="divider">
-                    <div class="line-10"></div>
-                    <div class="sign-in-with">hoặc đăng nhập với</div>
-                </div>
-                <button class="button-secondary">
-                    <img class="google" src="group0.svg" alt="Google icon">
-                    Đăng nhập với google
-                </button>
+    <div class="sidebar">
+        <div class="logo-menu">
+            <div class="fin-ebank-io">
+                <img src="your-logo.svg" alt="Logo" class="logo" />
+                HusTracking
             </div>
-            <a href="#" class="create-account">Tạo tài khoản</a>
+            <div class="menu">
+                <div class="menu-item active">
+                    <img class="menu-icon" src="menu-overview0.svg" />
+                    <div class="menu-text">Tổng quan</div>
+                </div>
+                <div class="menu-item">
+                    <img class="menu-icon" src="book0.svg" />
+                    <div class="menu-text">Giảng dạy</div>
+                </div>
+                <div class="menu-item">
+                    <img class="menu-icon" src="search0.svg" />
+                    <div class="menu-text">Nghiên cứu</div>
+                </div>
+                <div class="menu-item">
+                    <img class="menu-icon" src="heart0.svg" />
+                    <div class="menu-text">Phục vụ</div>
+                </div>
+                <div class="menu-item">
+                    <img class="menu-icon" src="vector0.svg" />
+                    <div class="menu-text">Học tập</div>
+                </div>
+                <div class="menu-item">
+                    <img class="menu-icon" src="plus-circle0.svg" />
+                    <div class="menu-text">Thêm nhiệm vụ</div>
+                </div>
+                <div class="menu-item">
+                    <img class="menu-icon" src="menu-settings0.svg" />
+                    <div class="menu-text">Cài đặt</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="logout-button">
+                <img class="logout-icon" src="logout0.svg" />
+                <div class="logout-text">Logout</div>
+            </div>
         </div>
     </div>
 </body>
