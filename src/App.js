@@ -4,6 +4,7 @@ import MyComponent from "./Component/Home/MyComponent";
 import Login from "./Component/Auth/Login";
 import Register from "./Component/Auth/Register";
 import Overview from "./Component/Overview/Overview";
+import Teach from "./Component/Teach/Teach";
 const App = () => {
   return (
     <Router>
@@ -12,6 +13,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/overview" element={<Overview />} />
+        <Route path="/teach" element={<Teach />} />
       </Routes>
     </Router>
   );
