@@ -14,7 +14,7 @@
     max-width: 400px;
     margin: auto;
     float: left;
-    
+    margin-left: 20px;
 }
 
 .view-all {
@@ -119,6 +119,7 @@
     padding: 8px 12px;
     display: flex;
     align-items: center;
+    margin-left: 15px;
 }
 
 .time {

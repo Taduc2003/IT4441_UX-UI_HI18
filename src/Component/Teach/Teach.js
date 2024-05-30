@@ -1,10 +1,13 @@
 import Sidebar from "../Sidebar";
 import "./Teach.css";
+import TeachKpi from "./TeachKpi/TeachKpi.js";
 const Teach = () => {
   return (
     <div className="overview-container">
       <Sidebar />
-      <div className="overview-content">Content teach</div>
+      <div className="overview-content">
+        <TeachKpi />
+      </div>
     </div>
   );
 };
