@@ -15,9 +15,9 @@ body {
   width: 100%;
 }
 
-.teach-box, .research-box, .serve-box, .study-box {
+.teach-box, .research-box, .serve-box {
   margin: 25px;
-  flex: 0 0 27%; /* Each box takes up 20% of the container width */
+  flex: 0 0 27%; /* Each box takes up 27% of the container width */
   height: 160px;
   background: #f8f8f8;
   border-radius: 8px;
@@ -30,11 +30,11 @@ body {
   overflow: hidden;
 }
 
-.teach-box:hover, .research-box:hover, .serve-box:hover, .study-box:hover {
+.teach-box:hover, .research-box:hover, .serve-box:hover {
   transform: scale(1.05);
 }
 
-.teach-graph-image, .reseach-graph-image, .serve-graph-image, .study-graph-image {
+.teach-graph-image, .research-graph-image, .serve-graph-image {
   width: 60%;
   height: 60%;
   display: flex;
@@ -55,14 +55,12 @@ body {
   background: linear-gradient(to right, #ffffff, #FFC042);
 }
 
-.study-box {
-  background: linear-gradient(to right, #ffffff, #31F2CF);
-}
-
-.content {
+.teach-box .content, .research-box .content, .serve-box .content {
   padding: 10px;
   text-align: center;
+  background-color: inherit; /* Ensure it inherits the background color */
 }
+
 
 .content h2 {
   margin: 0;
@@ -73,4 +71,16 @@ body {
 .content p {
   margin: 5px 0 0;
   color: #777;
+}
+
+.teach-content {
+  background: linear-gradient(to right, #ffffff, #FF9C9C);
+}
+
+.research-content {
+  background: linear-gradient(to right, #ffffff, #01BCF4);
+}
+
+.serve-content {
+  background: linear-gradient(to right, #ffffff, #FFC042);
 }

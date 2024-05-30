@@ -10,11 +10,12 @@ import NotificationBar from "../Overview/notificationBar/NotificationBar.js";
 
 const Teach = () => {
   return (
-    <div className="teach-container">
-      <Sidebar />
-      <div className="main-content">
-        <Header />
-        <div className="teach-kpi">
+    <>
+      <div className="overview-container">
+        <div className="side-bar">
+          <Sidebar />
+        </div>
+        <div className="overview-content">
           <TeachKpi />
         </div>
         <div className="task-container">
