@@ -85,12 +85,18 @@ const Sidebar = () => {
               <IoMdSettings className="menu-icon" />
               <div className="menu-text">Cài đặt</div>
             </Link>
-          </div>
-        </div>
-        <div className="footer">
-          <div className="logout-button">
-            <CiLogout className="menu-icon" />
-            <div className="logout-text">Logout</div>
+            <Link to="/login" className={`menu-item logout`}>
+              <CiLogout className="menu-icon" />
+              <div className="menu-text">Logout</div>
+            </Link>
+            {/* <Link to="/login">
+              <div className="footer">
+                <div className="logout-button">
+                  <CiLogout className="menu-icon" />
+                  <div className="menu-text">Logout</div>
+                </div>
+              </div>
+            </Link> */}
           </div>
         </div>
       </div>
