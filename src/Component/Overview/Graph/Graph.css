@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.graphs-container {
+  display: flex;
+  flex-direction: row;  /* Align boxes side by side */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px;
+  justify-content: space-around;  /* Add space around items */
+  width: 100%;
+}
+
+.teach-box, .research-box, .serve-box, .study-box {
+  margin: 25px;
+  flex: 0 0 27%; /* Each box takes up 20% of the container width */
+  height: 160px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  scroll-snap-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.teach-box:hover, .research-box:hover, .serve-box:hover, .study-box:hover {
+  transform: scale(1.05);
+}
+
+.teach-graph-image, .reseach-graph-image, .serve-graph-image, .study-graph-image {
+  width: 60%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -30px;
+}
+
+.teach-box  {
+  background: linear-gradient(to right, #ffffff, #FF9C9C);
+}
+
+.research-box {
+  background: linear-gradient(to right, #ffffff, #01BCF4);
+}
+
+.serve-box {
+  background: linear-gradient(to right, #ffffff, #FFC042);
+}
+
+.study-box {
+  background: linear-gradient(to right, #ffffff, #31F2CF);
+}
+
+.content {
+  padding: 10px;
+  text-align: center;
+}
+
+.content h2 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.content p {
+  margin: 5px 0 0;
+  color: #777;
+}

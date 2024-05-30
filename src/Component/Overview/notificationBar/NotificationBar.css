@@ -1,0 +1,59 @@
+.notificationBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-image: linear-gradient(to right, #FFD370, #E16F7C);
+  border-bottom: 1px solid #dee2e6;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid black;
+  padding-right: 20px;
+  margin-right: 20px;
+}
+
+.weatherIcon {
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.weatherText p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.dateTime {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: -420px;
+}
+
+.today p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.time h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.pic {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+  background-image: url('../../../img/man_running.png'); /* Set the path to your image here */
+  margin-right: -380px;
+}
+
+.workNow h3 {
+  margin: 0;
+  font-size: 18px;
+}
