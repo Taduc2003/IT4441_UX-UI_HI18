@@ -7,9 +7,7 @@ import Schedule from "./Schedule/Schedule";
 const Admin = () => {
   return (
     <div className="admin-container">
-      <div className="side-bar">
-        <Sidebar />
-      </div>
+      <Sidebar />
 
       <div className="main-content">
         <Header />

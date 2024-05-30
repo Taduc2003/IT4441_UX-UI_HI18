@@ -5,9 +5,9 @@
   }
   
   .side-bar {
-    width: 250px; /* Set a fixed width for the sidebar */
+    width: 200px; /* Set a fixed width for the sidebar */
     background-color: #333; /* Example background color */
-    color: #fff; /* Example text color */
+    /* color: #fff;  */
   }
   
   .main-content {

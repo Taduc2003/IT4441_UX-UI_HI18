@@ -66,8 +66,8 @@
 }
 
 .job h4 {
-  font-size: 14px;
-  color: #6c757d;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .avatar {
@@ -89,4 +89,3 @@
   font-size: 24px;
   cursor: pointer;
 }
-
