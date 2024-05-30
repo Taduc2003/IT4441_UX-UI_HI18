@@ -26,10 +26,6 @@ header {
     /* Ensure header takes full width */
     background-color: #f9f9f9;
     /* Example background color */
-    padding: 10px 20px;
-    /* Example padding */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Example shadow */
 }
 
 .overview-heading {
