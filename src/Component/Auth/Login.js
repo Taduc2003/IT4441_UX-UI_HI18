@@ -11,6 +11,9 @@ const Login = () => {
   const handleRegister = () => {
     navigate("/register");
   };
+  const handleOverview = () => {
+    navigate("/overview");
+  };
   return (
     <div>
       <div className="login">
@@ -60,7 +63,9 @@ const Login = () => {
                 Keep me signed in
               </label>
             </div>
-            <button className="button-primary">Đăng nhập</button>
+            <button className="button-primary" onClick={handleOverview}>
+              Đăng nhập
+            </button>
             <div className="divider">
               <div className="line-10"></div>
               <div className="sign-in-with">hoặc đăng nhập với</div>
