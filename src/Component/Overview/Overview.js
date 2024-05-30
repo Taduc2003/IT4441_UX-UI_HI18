@@ -7,9 +7,7 @@ import "./Overview.css"; // Import the CSS file for Admin component
 const Admin = () => {
   return (
     <div className="admin-container">
-      <div className="side-bar">
-        <Sidebar />
-      </div>
+      <Sidebar />
 
       <div className="main-content">
         <Header />

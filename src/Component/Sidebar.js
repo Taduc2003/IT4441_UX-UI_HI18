@@ -5,6 +5,7 @@ import { IoBookOutline } from "react-icons/io5";
 import { GoSearch } from "react-icons/go";
 import { FaHeart } from "react-icons/fa6";
 import { FaPen } from "react-icons/fa";
+import { MdOutlinePerson } from "react-icons/md";
 import { FaCirclePlus } from "react-icons/fa6";
 import { IoMdSettings } from "react-icons/io";
 import { CiLogout } from "react-icons/ci";
@@ -59,13 +60,13 @@ const Sidebar = () => {
               <div className="menu-text">Phục vụ</div>
             </Link>
             <Link
-              to="/study"
+              to="/personal"
               className={`menu-item ${
-                location.pathname === "/study" ? "active" : ""
+                location.pathname === "/personal" ? "active" : ""
               }`}
             >
-              <FaPen className="menu-icon" />
-              <div className="menu-text">Học tập</div>
+              <MdOutlinePerson className="menu-icon" />
+              <div className="menu-text">Cá nhân</div>
             </Link>
             <Link
               to="/add-task"

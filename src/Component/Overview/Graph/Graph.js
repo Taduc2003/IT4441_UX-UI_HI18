@@ -34,16 +34,6 @@ const Graph = () => {
           <p>Xem chi tiết</p>
         </div>
       </div>
-
-      <div className="study-box">
-        <div className="study-graph-image">
-          <CircleGraph percentage={60} color={'#46B795'} />
-        </div>
-        <div className="content">
-          <h2>Học tập</h2>
-          <p>Xem chi tiết</p>
-        </div>
-      </div>
     </div>
   )
 };

@@ -8,9 +8,10 @@ const Teach = () => {
   return (
     <>
       <div className="overview-container">
-        <div className="side-bar">
+        {/* <div className="side-bar">
           <Sidebar />
-        </div>
+        </div> */}
+        <Sidebar />
         <div className="overview-content">
           <TeachKpi />
           <div className="task-container">

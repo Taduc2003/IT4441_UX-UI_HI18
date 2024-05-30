@@ -6,8 +6,8 @@
     gap: 20px;
     align-items: flex-start;
     justify-content: space-between;
-    height: 100vh;
-    /* width: 200px; */
+    height: 130vh;
+    width: 200px;
 }
 
 .logo-menu {
@@ -50,6 +50,10 @@
     cursor: pointer;
     text-decoration: none;
     /* Ensure no underline on links */
+}
+
+.menu-item:hover {
+    background: #894f4f;
 }
 
 .menu-item.active {
