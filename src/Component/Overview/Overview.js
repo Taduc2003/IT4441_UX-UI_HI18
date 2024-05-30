@@ -3,7 +3,7 @@ import Sidebar from "../Sidebar";
 import Graph from "./Graph/Graph";
 import NotificationBar from "./notificationBar/NotificationBar";
 import "./Overview.css"; // Import the CSS file for Admin component
-
+import Schedule from "./Schedule/Schedule";
 const Admin = () => {
   return (
     <div className="admin-container">
@@ -24,7 +24,7 @@ const Admin = () => {
         </div>
 
         <div className="calendar">
-          {/* chú bảo nhét vào đây */}
+          <Schedule />
         </div>
       </div>
     </div>
