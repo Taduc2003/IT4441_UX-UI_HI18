@@ -44,7 +44,7 @@ const ChartComponent = (props) => {
 
     return (
         <div className="chart-container">
-            <div className='title'> Biểu đồ số giờ làm việc</div>
+            <div className='chart-title'> Biểu đồ số giờ làm việc</div>
             <div className="controls">
                 <label>
                 Số giờ tham gia {props.data.typee} theo 

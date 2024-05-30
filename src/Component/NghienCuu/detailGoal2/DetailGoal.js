@@ -4,7 +4,7 @@ const DetailGoal = (props) => {
     
   return (
     <div className = "top-contents">
-        <div class="title">Các {props.data.typee} trong kỳ</div>
+        <div class="detail-title">Các {props.data.typee} trong kỳ</div>
         <div class="noidung">
             {/* <div class="xemtatca"> */}
                 <div class="bills">
