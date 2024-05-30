@@ -1,57 +1,62 @@
+import React, { useState } from "react";
 import "./TaskList.css";
+
 const TaskList = () => {
+  const [activeTab, setActiveTab] = useState("completed");
+
+  const tasks = {
+    completed: [
+      { title: "Giảng dạy ITSS", date: "20/05/2024" },
+      { title: "Tạo form UX-UI", date: "20/05/2024" },
+      { title: "Giảng dạy môn ITSS", date: "19/05/2024" },
+      { title: "Chấm bài ITSS", date: "18/05/2024" },
+      { title: "Giảng dạy ITSS", date: "18/05/2024" },
+      { title: "Giảng dạy môn ITSS", date: "17 May 2023" },
+    ],
+    overdue: [
+      { title: "Hoàn thành báo cáo", date: "15/05/2024" },
+      { title: "Gửi email nhắc nhở", date: "14/05/2024" },
+    ],
+    incomplete: [
+      { title: "Chuẩn bị bài giảng mới", date: "25/05/2024" },
+      { title: "Cập nhật tài liệu học tập", date: "24/05/2024" },
+    ],
+  };
+
   return (
-    <div class="content">
-      <div class="menu-tab">
-        <div class="tab active">
-          <div class="tab-text">Đã Hoàn Thành</div>
+    <div className="content">
+      <div className="menu-tab">
+        <div
+          className={`tab ${activeTab === "completed" ? "active" : ""}`}
+          onClick={() => setActiveTab("completed")}
+        >
+          <div className="tab-text">Đã Hoàn Thành</div>
         </div>
-        <div class="tab">
-          <div class="tab-text">Quá Hạn</div>
+        <div
+          className={`tab ${activeTab === "overdue" ? "active" : ""}`}
+          onClick={() => setActiveTab("overdue")}
+        >
+          <div className="tab-text">Quá Hạn</div>
         </div>
-        <div class="tab">
-          <div class="tab-text">Chưa Hoàn Thành</div>
+        <div
+          className={`tab ${activeTab === "incomplete" ? "active" : ""}`}
+          onClick={() => setActiveTab("incomplete")}
+        >
+          <div className="tab-text">Chưa Hoàn Thành</div>
         </div>
       </div>
-      <div class="item-list">
-        <div class="item">
-          <div class="item-details">
-            <div class="item-title">Giảng dạy ITSS</div>
-            <div class="item-date">20/05/2024</div>
+      <div className="item-list">
+        {tasks[activeTab].map((task, index) => (
+          <div className="item" key={index}>
+            <div className="item-details">
+              <div className="item-title">{task.title}</div>
+              <div className="item-date">{task.date}</div>
+            </div>
           </div>
-        </div>
-        <div class="item">
-          <div class="item-details">
-            <div class="item-title">Tạo form UX-UI</div>
-            <div class="item-date">20/05/2024</div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-details">
-            <div class="item-title">Giảng dạy môn ITSS</div>
-            <div class="item-date">19/05/2024</div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-details">
-            <div class="item-title">Chấm bài ITSS</div>
-            <div class="item-date">18/05/2024</div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-details">
-            <div class="item-title">Giảng dạy ITSS</div>
-            <div class="item-date">18/05/2024</div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-details">
-            <div class="item-title">Giảng dạy môn ITSS</div>
-            <div class="item-date">17 May 2023</div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
 };
+
 export default TaskList;

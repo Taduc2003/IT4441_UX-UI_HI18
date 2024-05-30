@@ -7,7 +7,7 @@ import TaskDiagram from "./TaskDiagram/TaskDiagram.js";
 import Header from "../header/Header";
 import Graph from "../Overview/Graph/Graph.js";
 import NotificationBar from "../Overview/notificationBar/NotificationBar.js";
-
+import SpecialTime from "./SpecialTime/SpecialTime.js";
 const Teach = () => {
   return (
     <>
@@ -24,6 +24,7 @@ const Teach = () => {
           </div>
           <div className="task-diagram">
             <TaskDiagram />
+            <SpecialTime />
           </div>
         </div>
       </div>
