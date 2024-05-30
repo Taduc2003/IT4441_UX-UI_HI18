@@ -9,8 +9,8 @@ const ChartComponent = (props) => {
     const [view, setView] = useState('week');
     const [data, setData] = useState({
         week: [0, 3, 0.5, 0, 1, 2, 1.5],
-        month: [15, 12, 18, 22], // Hours per week in a month
-        semester: [50, 45, 40, 35] // Hours per month in a semester
+        month: [10, 0, 0, 0], // Hours per week in a month
+        semester: [10, 0, 0, 0] // Hours per month in a semester
     })
 
     const getLabels = () => {
@@ -54,6 +54,7 @@ const ChartComponent = (props) => {
                         <option value="semester">kỳ</option>
                     </select>
                 </label>
+            <div className="chart-wrapper">
             <Bar
                 data={{
                     labels: getLabels(),
@@ -65,17 +66,21 @@ const ChartComponent = (props) => {
                         },
                     ],
                 }}
-                // options={{
-                //     responsive: true,
-                //     plugins: {
-                //         legend: {
-                //             position: 'top',
-                //         },
-                //     },
-                // }}
+                options={{
+                    // responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                    },
+                    maintainAspectRatio: false,
+                }}
+                width={650}
+                height={220}
             />
             </div>
         </div>
+    </div>
     );
 };
 

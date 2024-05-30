@@ -6,7 +6,7 @@ const DetailGoal = (props) => {
     <div className = "top-contents">
         <div class="title">Các {props.data.typee} trong kỳ</div>
         <div class="noidung">
-            <div class="xemtatca">
+            {/* <div class="xemtatca"> */}
                 <div class="bills">
                     <div class="detailss">
                         <div class="dates">
@@ -39,7 +39,7 @@ const DetailGoal = (props) => {
                         <div class="trangthai">{props.data.status2}</div>
                     </div>
                 </div>
-            </div>
+            {/* </div> */}
         </div>
     </div>
   );

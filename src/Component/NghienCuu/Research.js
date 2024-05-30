@@ -4,6 +4,8 @@ import "./Research.css";
 import Goals from "./Goals/Goals"
 import ChartComponent from "./ColumnChart/ChartComponet";
 import DetailGoal from "./detailGoal2/DetailGoal";
+import Header from "../header/Header";
+import UploadFileOrImg from "./uploadFile/UploadFileOrImg";
 
 const Admin = () => {
     const data1 = {
@@ -43,6 +45,7 @@ const Admin = () => {
     <div className="overview-container">
       <Sidebar />
       <div className ="content-doc">
+      <Header />
       <div className="titles">Nghiên cứu</div>
         <div className="ngang">
         <Goals data ={data1}/> 
@@ -54,7 +57,7 @@ const Admin = () => {
         </div>
         <div className="ngang">
         <Goals data ={data3}/> 
-        
+        <UploadFileOrImg/>
         </div>
       </div>
     </div>
