@@ -6,6 +6,7 @@ import Register from "./Component/Auth/Register";
 import Overview from "./Component/Overview/Overview";
 import Teach from "./Component/Teach/Teach";
 import Research from "./Component/NghienCuu/Research";
+import Service from "./Component/servicekpi/Service";
 // import Schedule from "./Component/Overview/Schedule/Schedule";
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/overview" element={<Overview />} />
         <Route path="/teach" element={<Teach />} />
         <Route path="/research" element={<Research />} />
+        <Route path="/service" element={<Service />} />
       </Routes>
     </Router>
   );

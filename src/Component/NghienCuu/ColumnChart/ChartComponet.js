@@ -5,7 +5,7 @@ import './ChartComponent.css';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const ChartComponent = () => {
+const ChartComponent = (props) => {
     const [view, setView] = useState('week');
     const [data, setData] = useState({
         week: [0, 3, 0.5, 0, 1, 2, 1.5],
@@ -31,9 +31,9 @@ const ChartComponent = () => {
             case 'week':
                 return { label: 'Giờ thực hiện trong ngày' };
             case 'month':
-                return { label: 'Giờ làm trong tuần' };
+                return { label: 'Giờ thực hiện trong tuần' };
             case 'semester':
-                return { label: 'Giờ làm việc trong tháng'};
+                return { label: 'Giờ thực hiện trong tháng'};
             default:
                 return { label: '', text: '' };
         }
@@ -47,7 +47,7 @@ const ChartComponent = () => {
             <div className='title'> Biểu đồ số giờ làm việc</div>
             <div className="controls">
                 <label>
-                Số giờ tham gia nghiên cứu được theo 
+                Số giờ tham gia {props.data.typee} theo 
                     <select onChange={(e) => setView(e.target.value)} value={view}>
                         <option value="week">tuần</option>
                         <option value="month">tháng</option>

@@ -101,6 +101,7 @@
     font-size: 14px;
     line-height: 24px;
     font-weight: 600;
+    width: 350px;
 }
 
 .ketthucs {
@@ -130,4 +131,6 @@
     font-size: 16px;
     line-height: 24px;
     font-weight: 700;
+    width: 100px;
+    height: 50px;
 }

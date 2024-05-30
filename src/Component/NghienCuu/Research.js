@@ -27,7 +27,18 @@ const Admin = () => {
         realAverage: 0,
         needAverage: 2,
     };
+    const researchChart ={
+      typee : 'nghiên cứu',
+    }
 
+    const researchDetail = {
+      typee : 'bài báo nghiên cứu',
+      semester: '2023.1',
+      name1: 'Ảnh hưởng của hằng số thời gian T của mạch điều chỉnh đến độ chính xác gia công trên máy CNC',
+      status1: 'Chưa công bố',
+      name2: 'Phương pháp tính toán, thiết kế bộ truyền bánh răng –thanh răng',
+      status2: 'Đã công bố',
+    }
   return (
     <div className="overview-container">
       <Sidebar />
@@ -35,11 +46,11 @@ const Admin = () => {
       <div className="titles">Nghiên cứu</div>
         <div className="ngang">
         <Goals data ={data1}/> 
-        <ChartComponent/>
+        <ChartComponent data = {researchChart}/>
         </div>
         <div className="ngang">
         <Goals data ={data2}/> 
-        <DetailGoal/>
+        <DetailGoal data = {researchDetail}/>
         </div>
         <div className="ngang">
         <Goals data ={data3}/> 
