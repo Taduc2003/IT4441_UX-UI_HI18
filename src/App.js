@@ -5,6 +5,7 @@ import Login from "./Component/Auth/Login";
 import Register from "./Component/Auth/Register";
 import Overview from "./Component/Overview/Overview";
 import Teach from "./Component/Teach/Teach";
+import Research from "./Component/NghienCuu/Research";
 // import Schedule from "./Component/Overview/Schedule/Schedule";
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         {/* <Route path="/schedule" element={<Schedule />} /> */}
         <Route path="/overview" element={<Overview />} />
         <Route path="/teach" element={<Teach />} />
+        <Route path="/research" element={<Research />} />
       </Routes>
     </Router>
   );
