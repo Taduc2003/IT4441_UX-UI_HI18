@@ -1,23 +1,53 @@
-.overview-container {
+.teach-container {
     display: flex;
+    flex-direction: row;
+    height: 100vh;
+    /* Ensure the container takes full height */
 }
 
 .side-bar {
-    flex: 1;
+    width: 250px;
+    /* Set a fixed width for the sidebar */
+    background-color: #333;
+    /* Example background color */
+    color: #fff;
+    /* Example text color */
 }
 
-.overview-content {
-    flex: 4;
+.main-content {
+    flex-grow: 1;
+    /* Allow main content to take up remaining space */
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    /* Khoảng cách giữa các phần tử trong overview-content */
+}
+
+header {
+    width: 100%;
+    /* Ensure header takes full width */
+    background-color: #f9f9f9;
+    /* Example background color */
+    padding: 10px 20px;
+    /* Example padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Example shadow */
+}
+
+.overview-heading {
+    margin: 10px 0;
+}
+
+.notification-bar-wrapper {
+    margin-top: 0px;
+}
+
+.graph-wrapper {
+    margin-top: 20px;
 }
 
 .task-container {
     display: flex;
     gap: 20px;
-    /* Khoảng cách giữa TaskList và TaskDiagram */
+    /* Space between TaskList and TaskDiagram */
 }
 
 .task-list {
@@ -30,4 +60,7 @@
     flex: 2;
     margin-left: 0;
     padding-left: 0;
+}
+.teach-kpi{
+    margin-bottom: 50px;
 }
