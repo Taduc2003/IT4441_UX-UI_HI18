@@ -5,10 +5,6 @@ import Login from "./Component/Auth/Login";
 import Register from "./Component/Auth/Register";
 import Overview from "./Component/Overview/Overview";
 import Teach from "./Component/Teach/Teach";
-import Schedule from "./Component/Overview/Schedule/Schedule";
-import Header from "./Component/header/Header";
-import NotificationBar from "./Component/Overview/notificationBar/NotificationBar";
-import Sidebar from "./Component/Sidebar";
 
 const App = () => {
   return (
