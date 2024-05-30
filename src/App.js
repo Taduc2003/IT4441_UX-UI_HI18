@@ -5,6 +5,7 @@ import Login from "./Component/Auth/Login";
 import Register from "./Component/Auth/Register";
 import Overview from "./Component/Overview/Overview";
 import Teach from "./Component/Teach/Teach";
+// import Schedule from "./Component/Overview/Schedule/Schedule";
 
 const App = () => {
   return (
