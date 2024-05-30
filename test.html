@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cài đặt</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div class="container">
+        <div class="section" id="theme-section">
+            <h2>Theme</h2>
+            <div class="content">
+                <p>Chọn theme phù hợp với bạn</p>
+                <div class="theme-options">
+                    <div class="theme-option selected" id="light-theme">Sáng (đang sử dụng)</div>
+                    <div class="theme-option" id="dark-theme">Tối</div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Định dạng</h2>
+            <div class="content">
+                <div class="row">
+                    <p>Ngày và giờ</p>
+                    <label><input type="radio" name="date-format" checked> DD/MM/YYYY</label>
+                    <label><input type="radio" name="date-format"> YYYY/MM/DD</label>
+                </div>
+                <div class="row">
+                    <p>Chọn định dạng giờ:</p>
+                    <label><input type="radio" name="time-format" checked> 24 giờ (vd 14h)</label>
+                    <label><input type="radio" name="time-format"> 12 giờ (vd 2PM)</label>
+                </div>
+                <div class="row">
+                    <p>Định dạng số</p>
+                    <label><input type="radio" name="number-format" checked> Làm tròn kết quả: Đến phần nguyên</label>
+                    <label><input type="radio" name="number-format"> Đến 1 chữ số thập phân</label>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Ngôn ngữ</h2>
+            <div class="content">
+                <p>Chọn ngôn ngữ hiển thị:</p>
+                <label><input type="radio" name="language" value="vi" checked> Tiếng Việt</label>
+                <label><input type="radio" name="language" value="en"> Tiếng Anh</label>
+                <label><input type="radio" name="language" value="jp"> Tiếng Nhật</label>
+                <br><br>
+                <label class="toggle-switch"><input type="checkbox" name="default-language"><span class="slider"></span></label>
+                <span>Đặt làm ngôn ngữ mặc định</span>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Thông báo</h2>
+            <div class="content">
+                <label class="toggle-switch"><input type="checkbox" name="email-notifications"><span class="slider"></span></label>
+                <span>Gửi mọi thông báo tới email</span>
+                <br><br>
+                <label class="toggle-switch"><input type="checkbox" name="kpi-email-daily"><span class="slider"></span></label>
+                <span>Gửi tiến độ KPI đến email hàng ngày</span>
+                <br><br>
+                <label class="toggle-switch"><input type="checkbox" name="weekly-report-email"><span class="slider"></span></label>
+                <span>Gửi báo cáo hàng tuần đến email</span>
+                <br><br>
+                <label class="toggle-switch"><input type="checkbox" name="disable-app-notifications"><span class="slider"></span></label>
+                <span>Tắt thông báo ứng dụng</span>
+            </div>
+        </div>
+    </div>
+    <script src="test.js"></script>
+</body>
+</html>

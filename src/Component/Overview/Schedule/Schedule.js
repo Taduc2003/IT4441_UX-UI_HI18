@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import "./Schedule.css"; // Import css file
+import "./Schedule.css"; 
+
 
 const Schedule = () => {
   useEffect(() => {
@@ -107,7 +108,6 @@ const Schedule = () => {
           </tbody>
         </table>
       </div>
-      <div className="datepicker">
         <div className="wrapper">
           <header>
             <p className="current-date"></p>
@@ -130,7 +130,6 @@ const Schedule = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
