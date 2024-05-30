@@ -1,13 +1,17 @@
 /* test.css */
-body {
-    font-family: Arial, sans-serif;
+
+html, body, #root {
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+#root {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
 }
 
 .container {
@@ -144,7 +148,6 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 input:checked + .slider {
-
     background-color: #2196F3;
 }
 
