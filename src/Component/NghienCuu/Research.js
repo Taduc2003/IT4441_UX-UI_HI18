@@ -3,14 +3,48 @@ import "./Research.css";
 
 import Goals from "./Goals/Goals"
 import ChartComponent from "./ColumnChart/ChartComponet";
+import DetailGoal from "./detailGoal2/DetailGoal";
 
 const Admin = () => {
+    const data1 = {
+        goal: 'Mục tiêu mức 1',
+        title: 'Số giờ cần nghiên cứu trong kỳ',
+        hocki: 'Kỳ 2023.1',
+        realAverage: 10,
+        needAverage: 96,
+    };
+    const data2 = {
+        goal: 'Mục tiêu mức 2',
+        title: 'Số bài báo nghiên cứu đã công bố trong kỳ',
+        hocki: 'Kỳ  2023.1',
+        realAverage: 1,
+        needAverage: 3,
+    };
+    const data3 = {
+        goal: 'Mục tiêu mức 3',
+        title: 'Số bài báo được đâng trên tạp chí uy tín trong kỳ',
+        hocki: 'Kỳ  2023.1',
+        realAverage: 0,
+        needAverage: 2,
+    };
+
   return (
     <div className="overview-container">
       <Sidebar />
-      <div className="content">
-       <Goals/> 
-       <ChartComponent/>
+      <div className ="content-doc">
+      <div className="titles">Nghiên cứu</div>
+        <div className="ngang">
+        <Goals data ={data1}/> 
+        <ChartComponent/>
+        </div>
+        <div className="ngang">
+        <Goals data ={data2}/> 
+        <DetailGoal/>
+        </div>
+        <div className="ngang">
+        <Goals data ={data3}/> 
+        
+        </div>
       </div>
     </div>
   );
