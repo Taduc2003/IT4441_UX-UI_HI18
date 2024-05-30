@@ -4,6 +4,8 @@ import "./Service.css";
 import Goals from "../NghienCuu/Goals/Goals";
 import ChartComponent from "../NghienCuu/ColumnChart/ChartComponet";
 import DetailGoal from "../NghienCuu/detailGoal2/DetailGoal";
+import Header from "../header/Header";
+import UploadFileOrImg from "../NghienCuu/uploadFile/UploadFileOrImg";
 
 const Admin = () => {
     const data1 = {
@@ -32,7 +34,7 @@ const Admin = () => {
       }
   
       const serviceDetail = {
-        typee : 'Các hoạt động phục vụ tham gia',
+        typee : 'hoạt động phục vụ tham gia',
         semester: '2023.1',
         name1: 'Hoạt động tình nghiện vì trẻ em nghèo ',
         status1: 'Đã hoàn thành',
@@ -44,6 +46,7 @@ const Admin = () => {
     <div className="overview-container">
       <Sidebar />
       <div className ="content-doc">
+      <Header />
       <div className="titles">Phục vụ</div>
         <div className="ngang">
         <Goals data ={data1}/> 
@@ -55,7 +58,7 @@ const Admin = () => {
         </div>
         <div className="ngang">
         <Goals data ={data3}/> 
-        
+        <UploadFileOrImg/>
         </div>
       </div>
     </div>

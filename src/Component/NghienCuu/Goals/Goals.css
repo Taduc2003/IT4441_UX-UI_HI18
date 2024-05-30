@@ -1,12 +1,13 @@
 .goals {
     display: flex;
     flex-direction: column;
-    width: 371;
+    width: 371px;
     height: 258px;
     align-items: flex-start;
     gap: 8px;
     position: relative;
     margin-left: 20px;
+    margin-top: 40px;
   }
   
   .goals .text-wrapper {
@@ -78,7 +79,8 @@
   }
 
   .theo-tuan{
-    width: 200px;
+    width: 230px;
+    height: 40px
   }
   
   .goals .chevron-down {

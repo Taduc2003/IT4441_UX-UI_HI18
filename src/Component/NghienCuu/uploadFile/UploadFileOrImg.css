@@ -1,0 +1,60 @@
+.upload-container{
+    display: inline-block;
+    width: 650px;
+    height: 258px;
+    padding: 24px;
+}
+.upload-label{
+    color: var(--gray-02, #878787);
+    text-align: left;
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 20px;
+    line-height: 16px;
+    font-weight: 500;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.file-upload-content {
+    background-color: white;
+    padding: 20.4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    max-width: 650px;
+    height: 200px;
+    border-radius: 8px;
+    margin: auto;
+    float: left;
+    box-shadow: 0em 0em 1em 0em;
+}
+
+.preview-image {
+    width: 300px; /* Đặt chiều rộng cố định */
+    height: 300px; /* Đặt chiều cao cố định */
+    object-fit: cover; /* Đảm bảo ảnh lấp đầy container mà không bị méo */
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input {
+  display: block;
+  margin-bottom: 16px;
+}
+ 
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+ 
+button:hover {
+  background-color: #45a049;
+}
