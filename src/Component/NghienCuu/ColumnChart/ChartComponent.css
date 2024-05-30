@@ -5,12 +5,13 @@
     padding: 10px;
     background-color: #fff;
     border-radius: 8px;
+    gap: 8px;
 
 }
 
 .title {
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     color: var(--gray-02);
     font-size: var(--header-22-32-font-size);
     letter-spacing: var(--header-22-32-letter-spacing);
@@ -24,9 +25,9 @@
     display: inline-block;
     justify-content: space-between;
     align-items: center;
-    height: 258px;
+    height: 200px;
     width: 650px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     border-radius: 8px;
     box-shadow: 0em 0em 1em 0em;
 }

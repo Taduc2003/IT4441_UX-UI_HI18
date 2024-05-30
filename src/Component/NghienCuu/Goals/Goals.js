@@ -6,11 +6,12 @@ import GaugeChartComponent from "./GaugesChart";
 const Goals = (props) => {
     return (
         <div className="goals">
-            <div className="text-wrapper">Mục tiêu mức 1</div>
-            <div className="content">
+            <div className="text-wrapper">{props.data.goal}</div>
+            <div className="content-goal">
                 <header className="header">
                     <div className="frame">
-                        <div className="theo-tuan">{props.data.title}</div>
+                        <div className="theo-tuan">
+                        {props.data.title}</div>
                         {/* <img className="chevron-down" src="img/chevron-down.svg" alt="Chevron Down"/> */}
                     </div>
                     <div className="k">{props.data.hocki}</div>

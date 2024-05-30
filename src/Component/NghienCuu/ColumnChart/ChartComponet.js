@@ -11,9 +11,7 @@ const ChartComponent = () => {
         week: [0, 3, 0.5, 0, 1, 2, 1.5],
         month: [15, 12, 18, 22], // Hours per week in a month
         semester: [50, 45, 40, 35] // Hours per month in a semester
-    });
-
-    const [inputData, setInputData] = useState('');
+    })
 
     const getLabels = () => {
         switch (view) {
@@ -31,11 +29,11 @@ const ChartComponent = () => {
     const getLabelText = () => {
         switch (view) {
             case 'week':
-                return { label: 'Giờ thực hiện trong ngày', text: 'Số giờ tham gia nghiên cứu được theo tuần' };
+                return { label: 'Giờ thực hiện trong ngày' };
             case 'month':
-                return { label: 'Giờ làm trong tuần', text: 'Số giờ tham gia nghiên cứu được theo tháng' };
+                return { label: 'Giờ làm trong tuần' };
             case 'semester':
-                return { label: 'Giờ làm việc trong tháng', text: 'Số giờ tham gia nghiên cứu được theo kỳ' };
+                return { label: 'Giờ làm việc trong tháng'};
             default:
                 return { label: '', text: '' };
         }
@@ -49,11 +47,11 @@ const ChartComponent = () => {
             <div className='title'> Biểu đồ số giờ làm việc</div>
             <div className="controls">
                 <label>
-                    Xem theo:
+                Số giờ tham gia nghiên cứu được theo 
                     <select onChange={(e) => setView(e.target.value)} value={view}>
-                        <option value="week">Tuần</option>
-                        <option value="month">Tháng</option>
-                        <option value="semester">Kỳ</option>
+                        <option value="week">tuần</option>
+                        <option value="month">tháng</option>
+                        <option value="semester">kỳ</option>
                     </select>
                 </label>
             <Bar
@@ -67,18 +65,14 @@ const ChartComponent = () => {
                         },
                     ],
                 }}
-                options={{
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                        },
-                        title: {
-                            display: true,
-                            text: text,
-                        },
-                    },
-                }}
+                // options={{
+                //     responsive: true,
+                //     plugins: {
+                //         legend: {
+                //             position: 'top',
+                //         },
+                //     },
+                // }}
             />
             </div>
         </div>
