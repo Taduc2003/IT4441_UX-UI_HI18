@@ -69,9 +69,9 @@ const Sidebar = () => {
               <div className="menu-text">Cá nhân</div>
             </Link>
             <Link
-              to="/add-task"
+              to="/createKPI"
               className={`menu-item ${
-                location.pathname === "/add-task" ? "active" : ""
+                location.pathname === "/createKPI" ? "active" : ""
               }`}
             >
               <FaCirclePlus className="menu-icon" />

@@ -1,0 +1,120 @@
+/* KPISetup.css */
+.kpi-step {
+    width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .step-indicator {
+    display: flex;
+    justify-content: center; /* Căn giữa các bước */
+    margin-bottom: 20px;
+  }
+  
+  .step-indicator span {
+    display: flex; 
+    align-items: center;
+    width: auto;
+    margin: 0 10px;
+    padding: 0 50px;  /* Khoảng cách giữa các bước */
+  }
+  
+  .step-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: white;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .step-indicator span.active .step-number {
+    background-color: #ff698d;
+  }
+  h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .kpi-section {
+    margin-bottom: 15px;
+  }
+  
+  details {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  summary {
+    padding: 10px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .goal-info {
+    float: right;
+  }
+  
+  .task-list {
+    padding: 10px;
+  }
+  
+  .add-task {
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  
+  .add-task-btn {
+    background-color: #ff698d;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .task-name {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+  .task-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .task-duration,
+  .task-weight {
+    margin-left: 10px;
+  }
+  
+  .button-group {
+    text-align: right; /* Căn phải */
+  }
+  
+  .button-group button {
+    background-color: #ff698d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px; /* Khoảng cách giữa các nút */
+  }
+  

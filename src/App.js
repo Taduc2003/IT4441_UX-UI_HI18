@@ -8,6 +8,9 @@ import Teach from "./Component/Teach/Teach";
 import Research from "./Component/NghienCuu/Research";
 import Service from "./Component/servicekpi/Service";
 import Setting from "./Component/Settings/Setting";
+import CreateKPI from "./Component/createKPI/CreateKPI";
+import KPISetup from "./Component/createKPI/KPISetup";
+import KPISuccess from "./Component/createKPI/KPISuccess";
 import Personal from "./Component/Personal/Personal.js";
 // import Schedule from "./Component/Overview/Schedule/Schedule";
 
@@ -26,7 +29,7 @@ const App = () => {
         {/* import Service from "./Component/servicekpi/Service"; */}
         <Route path="/service" element={<Service />} />
         <Route path="/settings" element={<Setting />} />
-        <Route path="/personal" element={<Personal />} />
+
       </Routes>
     </Router>
   );

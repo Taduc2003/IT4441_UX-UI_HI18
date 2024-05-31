@@ -1,38 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training Hours</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+<title>Thiết lập KPI Giảng viên</title>
+<style>
+body {
+    font-family: sans-serif;
+}
 
+.kpi-step {
+    width: 800px; /* Điều chỉnh độ rộng theo nhu cầu */
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.step-indicator span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: #fff;
+    text-align: center;
+}
+
+.step-indicator span.active {
+    background-color: #007bff;
+}
+
+.goal-content h2, h3, h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.goal-select button {
+    padding: 8px 16px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.goal-select button.selected {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.specific-goals label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.task-item .task-name {
+    flex-grow: 1;
+}
+
+.task-item .task-duration, .task-item .task-weight {
+    margin-left: 10px;
+}
+
+.next-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Thêm các kiểu dáng khác cho các phần tử khác nếu cần */
+</style>
+</head>
 <body>
-    <div class="container">
-        <h2>Số giờ đào tạo chuyên môn theo tháng <span>*So sánh với tháng trước</span></h2>
-        <div class="grid">
-            <div class="item">
-                <h3>ITSS</h3>
-                <p class="hours">13 giờ</p>
-                <p class="change positive">↑ 3,3%</p>
-            </div>
-            <div class="item">
-                <h3>Kĩ thuật phần mềm</h3>
-                <p class="hours">16 giờ</p>
-                <p class="change positive">↑ 0,6%</p>
-            </div>
-            <div class="item">
-                <h3>UI-UX</h3>
-                <p class="hours">25 giờ</p>
-            </div>
-            <div class="item">
-                <h3>Trí tuệ nhân tạo</h3>
-                <p class="hours">11 giờ</p>
-                <p class="change negative">↓ 0,6%</p>
-            </div>
+
+<div class="kpi-step kpi-set-goal">
+    <div class="step-indicator">
+        <span class="active">1 Mục tiêu</span>
+        <span>2 Thiết lập KPI</span>
+        <span>3 Hoàn Thành</span>
+    </div>
+    <div class="goal-content">
+        <h2>Giảng viên: ĐỖ QUỐC BẢO</h2>
+        <h3>Kỳ học: 20232</h3>
+        <div class="goal-select">
+            <h4>Mục tiêu muốn đạt được:</h4>
+            <button class="btn">Xuất sắc</button>
+            <button class="btn selected">Giỏi</button>
+            <button class="btn">Khá</button>
+        </div>
+
+        <div class="specific-goals">
+            <details>
+                <summary>Giảng dạy <span style="float: right;">Trọng số: 30%  Thời gian dạy:30h/tuần</span></summary>
+                <div style="padding: 10px 0;">
+                  <button id="addMiniGoalBtn">+ Thêm nhiệm vụ</button>
+                  <div class="task-item">
+                    <div class="task-name">Dạy UIUX</div>
+                    <div class="task-duration">Thời lượng:2.15h</div>
+                    <div class="task-weight">Trọng số:20%</div>
+                </div>
+                <div class="task-item">
+                    <div class="task-name">ITSS</div>
+                    <div class="task-duration">Thời lượng:3h</div>
+                    <div class="task-weight">Trọng số:20%</div>
+                </div>
+                </div>
+            </details>
+            <details>
+                <summary>Nghiên cứu <span style="float: right;">Trọng số: 30%  Thời gian:8h/tuần</span></summary>
+            </details>
+            <details>
+                <summary>Phục vụ <span style="float: right;">Trọng số: 10%  Thời gian:4h/tuần</span></summary>
+            </details>
         </div>
     </div>
-</body>
+    <button class="next-btn">TIẾP TỤC</button>
+    <button class="next-btn">TRỞ LẠI</button>
+</div>
 
+</body>
 </html>
