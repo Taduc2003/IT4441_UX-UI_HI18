@@ -16,7 +16,7 @@ const KPISetup = () => {
     'Phục vụ': []
   };
   const handleGoBack = () => {navigate('/createKPI')};
-  const handleGoNext = () => {navigate('/createKPI/success')};
+  const handleGoNext = () => {navigate('/kpisuccess')};
   return (<div className="kpi-step1">
     <Sidebar />
     <div className="kpi-step">

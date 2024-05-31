@@ -21,7 +21,7 @@ const CreateKPI = () => {
     const handleSubmit = () => {
         console.log('Selected Goal:', goal);
         console.log('Selected Sub Goals:', subGoals);
-        navigate('/createKPI/setup', { state: { goal, subGoals } });
+        navigate('/kpisetup', { state: { goal, subGoals } });
     };
 
     return (<div className="kpi-step1">
