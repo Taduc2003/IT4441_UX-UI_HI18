@@ -1,13 +1,13 @@
 .container {
   display: flex;
   flex-direction: row;
+  margin: 0;
 }
 
 .main-content {
   flex-grow: 1; /* Allow main content to take up remaining space */
     display: flex;
     flex-direction: column;
-    padding-left: 10px;
 }
 
 .top-page {
@@ -46,6 +46,7 @@
   text-decoration: none; /* Remove underline from text */
   margin: 10px auto; /* Center align the button and add some top margin */
   margin-top: 37%;
+  z-index: 1;
 }
 
 .change-info-button p {
@@ -186,3 +187,119 @@
   cursor: pointer;
   outline: none;
 }
+
+.security {
+  width: 90%;
+  height: 500px;
+  margin-left: 15%;
+  align-self: center;
+  margin-top: -20px;
+  background-image: url('../../img/secu.png');
+  background-size: 55%;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.change-password-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  background-color: #191919; /* Button background color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline from text */
+  margin-top: 33%;
+  margin-left: 1%;
+}
+
+.change-password-button p {
+  margin: 0 10px; /* Space between icon and text */
+}
+
+.change-password-button svg {
+  font-size: 18px; /* Adjust icon size */
+}
+
+
+.security {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.security .change-password-button {
+  display: flex;
+  align-items: center;
+}
+
+.security .change-password-button p {
+  margin-left: 8px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1500;
+}
+
+.password-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  z-index: 2000;
+  width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.password-modal-content {
+  position: relative;
+  padding: 20px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.confirm-button {
+  background-color: #191919;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cancel-button {
+  background-color: #FF698D;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
