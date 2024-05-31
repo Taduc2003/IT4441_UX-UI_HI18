@@ -1,0 +1,42 @@
+/* KPISuccess.css */
+.kpi-step { /* Giữ nguyên các style từ KPISetup.css */ }
+
+.success-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+  .kpi-step1 {
+    display: flex; /* Sử dụng flexbox */
+  }
+  
+  .success-icon svg {
+    fill: #ff698d; /* Màu hồng */
+    width: 400px;   /* Tăng kích thước ảnh */
+    height: 400px; 
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 0px;
+    text-align: center; /* Căn giữa text */
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button-group button {
+    background-color: #ff698d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 30px 5px; /* Khoảng cách giữa các nút */
+  }
+  
