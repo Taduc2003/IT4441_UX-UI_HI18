@@ -29,7 +29,10 @@ const App = () => {
         {/* import Service from "./Component/servicekpi/Service"; */}
         <Route path="/service" element={<Service />} />
         <Route path="/settings" element={<Setting />} />
-
+        <Route path="/personal" element={<Personal />} />
+        <Route path="/createkpi" element={<CreateKPI />} />
+        <Route path="/kpisetup" element={<KPISetup />} />
+        <Route path="/kpisuccess" element={<KPISuccess />} />
       </Routes>
     </Router>
   );
