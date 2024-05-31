@@ -1,70 +1,63 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
 .container {
-    background: #fff;
+    background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 600px;
+    width: 500px;
+    font-family: Arial, sans-serif;
 }
 
-.container h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+.progressBar {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.container h2 span {
-    font-size: 12px;
-    color: #888;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.item {
-    background: #f1f1f1;
-    padding: 20px;
-    border-radius: 8px;
+.step {
+    flex: 1;
     text-align: center;
-    position: relative;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+    color: #aaa;
 }
 
-.item h3 {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 10px;
+.completed {
+    border-color: #e91e63;
+    color: #e91e63;
 }
 
-.item .hours {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.formGroup {
+    margin-bottom: 20px;
 }
 
-.item .change {
-    font-size: 14px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
 }
 
-.change.positive {
-    color: green;
+.radioGroup, .checkboxGroup {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.change.negative {
-    color: red;
+.radioGroup input, .checkboxGroup input {
+    margin-right: 10px;
+}
+
+.radioGroup label, .checkboxGroup label {
+    margin-right: 20px;
+}
+
+button {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d81b60;
 }
