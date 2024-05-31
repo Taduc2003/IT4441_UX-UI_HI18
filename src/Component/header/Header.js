@@ -18,15 +18,9 @@ const Header = () => {
           </div>
           <div className="user">
             <div className="userInfo">
-                <div className="userName">
-                    <h3>Hoang Quan</h3>
-                </div>
                 <div className="job">
-                    <h4>Giảng viên đại học</h4>
+                    <h4>Hoàng Quân</h4>
                 </div>
-            </div>
-            <div className="avatar">
-                {/* avatar picture  is the background for this div */}
             </div>
           </div>
           <div className="moreInfo">
@@ -37,3 +31,4 @@ const Header = () => {
 };
 
 export default Header;
+

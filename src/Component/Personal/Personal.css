@@ -1,0 +1,188 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-content {
+  flex-grow: 1; /* Allow main content to take up remaining space */
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.top-page {
+  width: 95%;
+  height: 500px;
+  background-image: url('../../img/toppage.png');
+  align-self: center;
+  background-size: 95%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.info {
+  width: 95%;
+  height: 500px;
+  align-self: center;
+  margin-top: -40px;
+  background-image: url('../../img/info.png');
+  background-size: 78%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Change info button */
+.change-info-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  background-color: #191919; /* Button background color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline from text */
+  margin: 10px auto; /* Center align the button and add some top margin */
+  margin-top: 37%;
+}
+
+.change-info-button p {
+  margin: 0 10px; /* Space between icon and text */
+}
+
+.change-info-button svg {
+  font-size: 18px; /* Adjust icon size */
+}
+
+.change-cover-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  background-color: #191919; /* Button background color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline from text */
+  margin-top: 30%;
+  margin-left: 85%;
+}
+
+.change-cover-button p {
+  margin: 0 10px; /* Space between icon and text */
+}
+
+.change-cover-button svg {
+  font-size: 18px; /* Adjust icon size */
+}
+
+.change-avatar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 40px;
+  background-color: #191919;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute; /* Ensure button's position is absolute */
+  margin-top: 5%;
+  margin-left: 12.5%;
+   /* Ensure button is above other elements */
+}
+
+.change-avatar-button p {
+  margin: 0 10px;
+}
+
+.change-avatar-button svg {
+  font-size: 18px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.close {
+  cursor: pointer;
+  font-size: 24px; /* Increase font size */
+  padding: 10px; /* Add padding to increase clickable area */
+}
+
+
+.modal-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.input-field {
+  margin-bottom: 20px;
+}
+
+.rounded-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rounded-button {
+  padding: 10px 20px;
+  background-color: #191919;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}

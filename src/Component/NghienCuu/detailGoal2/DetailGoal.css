@@ -1,0 +1,132 @@
+.top-contents{
+    display: inline-block;
+    width: 650px;
+    height: 258px;
+    padding: 24px;
+}
+
+.noidung {
+    background-color: white;
+    padding: 20.4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    max-width: 650px;
+    height: 200px;
+    border-radius: 8px;
+    margin: auto;
+    float: left;
+    box-shadow: 0em 0em 1em 0em;
+
+}
+.title {
+    color: var(--gray-02, #878787);
+    text-align: left;
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 20px;
+    line-height: 16px;
+    font-weight: 500;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.chevron-rights {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+}
+
+.bills {
+    border-bottom: 5px solid var(--gray-06, #f3f3f3);
+    padding: 12px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+.detailss {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+
+.dates {
+    background: rgba(210, 210, 210, 0.25);
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+}
+
+.semester{
+    color: rgba(25, 25, 25, 0.7);
+    text-align: center;
+    font-family: "Inter-ExtraBold", sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 800;
+}
+
+.subscription-names {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.tenbaibao {
+    color: var(--secondary, #525256);
+    text-align: left;
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
+    width: 350px;
+}
+
+.ketthucs {
+    color: var(--gray-03, #9f9f9f);
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+.amounts {
+    background: var(--white, #ffffff);
+    border-radius: 8px;
+    border: 3px solid var(--gray-05, #e8e8e8);
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    width: 120px;
+}
+
+.trangthai {
+    color: var(--secondary, #525256);
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    width: 100px;
+    height: 50px;
+}
