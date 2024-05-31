@@ -6,7 +6,7 @@ const KPISuccess = () => {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
-    navigate('/createKPI/setup'); // Hoặc đường dẫn khác tùy thuộc vào luồng ứng dụng của bạn
+    navigate('/kpisetup'); 
   };
   const handleGoNext = () => {
     navigate('/overview');
@@ -39,7 +39,7 @@ const KPISuccess = () => {
 
       <div className="button-group">
         <button onClick={handleGoBack}>TRỞ LẠI</button>
-        <button onClick={handleGoNext}>TIẾP TỤC</button> {/* Nút này có thể điều hướng đến trang khác */}
+        <button onClick={handleGoNext}>TIẾP TỤC</button> 
       </div>
     </div></div>
   );
