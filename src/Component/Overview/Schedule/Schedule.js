@@ -61,7 +61,7 @@ const Schedule = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="containers">
       <div className="schedule">
         <h2>Lịch làm việc ngày hôm nay</h2>
         <table>

@@ -15,7 +15,7 @@
 
 .ngang{
     display: flex;
-    flex-direction: row; /* Sắp xếp các phần tử theo hàng ngang */
+    flex-direction: column; /* Sắp xếp các phần tử theo hàng ngang */
     justify-content: space-between; /* Khoảng cách đều giữa các phần tử */
     align-items: center; /* Căn giữa các phần tử theo chiều dọc */
     gap: 50px; /* Khoảng cách giữa các phần tử, tùy chỉnh theo nhu cầu */

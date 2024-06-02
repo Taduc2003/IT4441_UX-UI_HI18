@@ -13,9 +13,9 @@ const Admin = () => {
         <Header />
         <h1 className="overview-heading">Tổng quan</h1>
 
-        <div className="notification-bar-wrapper">
+        {/* <div className="notification-bar-wrapper">
           <NotificationBar />
-        </div>
+        </div> */}
 
         <div className="graph-wrapper">
           <Graph />

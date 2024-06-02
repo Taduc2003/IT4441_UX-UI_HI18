@@ -8,18 +8,27 @@
     font-family: Arial, sans-serif;
     margin: auto;
     flex: 1;
+    width: 700px;
+    height: 650px;
   }
   
   .createKPIProgressBar {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    width: 737px;
+    height: 650px;
   }
   
   .kpi-step1 {
     display: flex; 
+    width: 700px;
+    height: 650px;
   }
-  
+  .form{
+    width:700px;
+    height: 650px;
+  }
   .createKPIStep {
     flex: 1;
     text-align: center;

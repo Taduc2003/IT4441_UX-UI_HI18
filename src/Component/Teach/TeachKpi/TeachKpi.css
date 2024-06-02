@@ -1,5 +1,4 @@
 .kpi-schedule-container {
-    display: flex;
     flex-direction: row;
     gap: 30px;
     margin-top: 20px;

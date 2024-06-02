@@ -33,30 +33,30 @@ const Personal = () => {
         <Header />
 
         <div className="top-page">
-          <div className="change-cover-button" onClick={handleFileInputClick}>
+          {/* <div className="change-cover-button" onClick={handleFileInputClick}>
             <FaPen />
             <p>Đổi ảnh bìa</p>
           </div>
           <div className="change-avatar-button" onClick={handleFileInputClick}>
             <FaPen />
             <p>Đổi ảnh đại diện</p>
-          </div>
+          </div> */}
         </div>
 
         <div className="info">
           {/* Hidden file input element */}
           <input type="file" id="fileInput" style={{ display: "none" }} />
-          <div className="change-info-button" onClick={toggleModal}>
+          {/* <div className="change-info-button" onClick={toggleModal}>
             <FaPen />
             <p>Sửa thông tin</p>
-          </div>
+          </div> */}
         </div>
 
         <div className="security">
-          <div className="change-password-button" onClick={togglePasswordModal}>
+          {/* <div className="change-password-button" onClick={togglePasswordModal}>
             <FaPen />
             <p>Đổi mật khẩu</p>
-          </div>
+          </div> */}
         </div>
 
         {/* Modal */}

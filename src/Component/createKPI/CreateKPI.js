@@ -42,8 +42,8 @@ const CreateKPI = () => {
             <div className="step-text">Hoàn Thành</div>
         </span>
         </div>
-
-            <Form>
+    <div className='form'>
+    <Form >
                 <Form.Group className="createKPIFormGroup">
                     <Form.Label>GIẢNG VIÊN: ĐỖ QUỐC BẢO</Form.Label>
                 </Form.Group>
@@ -125,6 +125,8 @@ const CreateKPI = () => {
                     <Button variant="primary" onClick={handleSubmit} className="createKPIButton">TIẾP TỤC</Button>
                 </Form.Group>
             </Form>
+    </div>
+            
         </div>
         </div>
     );

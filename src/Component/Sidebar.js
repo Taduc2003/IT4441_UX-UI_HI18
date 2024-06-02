@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SideBar.css";
 import logo from "../img/logo.png";
 import { IoBookOutline } from "react-icons/io5";
@@ -11,12 +11,19 @@ import { IoMdSettings } from "react-icons/io";
 import { CiLogout } from "react-icons/ci";
 import { FaThLarge } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import { FaBars } from "react-icons/fa"; // Import icon for toggle button
+
 const Sidebar = () => {
   const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <>
-      <div className="sidebar">
+      <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <div className="logo-menu">
           <div className="fin-ebank-io">
             <img src={logo} alt="Logo" className="logo" />
@@ -59,7 +66,7 @@ const Sidebar = () => {
               <FaHeart className="menu-icon" />
               <div className="menu-text">Phục vụ</div>
             </Link>
-            <Link
+            {/* <Link
               to="/personal"
               className={`menu-item ${
                 location.pathname === "/personal" ? "active" : ""
@@ -67,7 +74,7 @@ const Sidebar = () => {
             >
               <MdOutlinePerson className="menu-icon" />
               <div className="menu-text">Cá nhân</div>
-            </Link>
+            </Link> */}
             <Link
               to="/createKPI"
               className={`menu-item ${
@@ -90,17 +97,12 @@ const Sidebar = () => {
               <CiLogout className="menu-icon" />
               <div className="menu-text">Logout</div>
             </Link>
-            {/* <Link to="/login">
-              <div className="footer">
-                <div className="logout-button">
-                  <CiLogout className="menu-icon" />
-                  <div className="menu-text">Logout</div>
-                </div>
-              </div>
-            </Link> */}
           </div>
         </div>
       </div>
+      <button className="toggle-button" onClick={toggleSidebar}>
+        <FaBars />
+      </button>
     </>
   );
 };

@@ -12,7 +12,10 @@
     justify-content: center; /* Căn giữa các bước */
     margin-bottom: 20px;
   }
-  
+  .kpi-step-set{
+    width: 700px;
+    height: 650px;
+  }
   .step-indicator span {
     display: flex; 
     align-items: center;

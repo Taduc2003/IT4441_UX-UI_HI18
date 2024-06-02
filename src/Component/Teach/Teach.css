@@ -41,7 +41,6 @@ header {
 }
 
 .task-container {
-    display: flex;
     gap: 20px;
     /* Space between TaskList and TaskDiagram */
 }

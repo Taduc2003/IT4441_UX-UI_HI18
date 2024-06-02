@@ -16,7 +16,7 @@ body {
 
 .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 20px;
     justify-content: space-between;
 }

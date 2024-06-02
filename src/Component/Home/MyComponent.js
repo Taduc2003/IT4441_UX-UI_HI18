@@ -15,31 +15,29 @@ const MyComponent = () => {
 
   return (
     <div className="mycomponent-container">
-      <header>
-        <div className="header-nav">
-          <nav>
-            <ul>
-              <li>
-                <a href="#" className="active">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#">About Me</a>
-              </li>
-              <li className="logo">
-                <h1>HusTracking</h1>
-                <p>Best tracking website</p>
-              </li>
-              <li>
-                <a href="#">Blog</a>
-              </li>
-              <li>
-                <a href="#">Contact</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+      <header className="header-nav">
+        <nav>
+          <ul>
+            <li>
+              <a href="#" className="active">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#">About Me</a>
+            </li>
+            <li className="logo">
+              <h1>HusTracking</h1>
+              <p>Best tracking website</p>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
       </header>
       <main className="welcome-section">
         <h3>Chào mừng bạn đến với HusTracking</h3>

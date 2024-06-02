@@ -13,7 +13,7 @@
 .top-page {
   width: 95%;
   height: 500px;
-  background-image: url('../../img/toppage.png');
+  background-image: url('../../img/mbtoppage.png');
   align-self: center;
   background-size: 95%;
   background-position: center;
@@ -24,13 +24,12 @@
   width: 95%;
   height: 500px;
   align-self: center;
-  margin-top: -40px;
+  margin-top: -120px;
   background-image: url('../../img/info.png');
-  background-size: 78%;
+  background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
 }
-
 /* Change info button */
 .change-info-button {
   display: flex;
@@ -193,10 +192,11 @@
   height: 500px;
   margin-left: 15%;
   align-self: center;
-  margin-top: -20px;
+  margin-top: -200px;
   background-image: url('../../img/secu.png');
-  background-size: 55%;
+  background-size: 85%;
   background-position: left;
+  margin-left: 100px;
   background-repeat: no-repeat;
 }
 
@@ -301,5 +301,3 @@
   cursor: pointer;
   border-radius: 4px;
 }
-
-

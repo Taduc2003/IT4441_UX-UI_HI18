@@ -19,7 +19,7 @@ const KPISetup = () => {
   const handleGoNext = () => {navigate('/kpisuccess')};
   return (<div className="kpi-step1">
     <Sidebar />
-    <div className="kpi-step">
+    <div className="kpi-step-set">
         
     <div className="step-indicator">
         <span >
