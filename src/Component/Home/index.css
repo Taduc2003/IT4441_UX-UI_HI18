@@ -89,6 +89,9 @@ body {
 }
 .home-container .welcome-image{
     margin-left: 100px;
+  img{
+    width: 600px; ;
+  }
 
 }
 .welcome-section h2 {
