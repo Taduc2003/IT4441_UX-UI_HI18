@@ -1,110 +1,196 @@
-.container {
+.admin-container {
   display: flex;
   flex-direction: row;
-  margin: 0;
+  height: 100vh; /* Ensure the container takes full height */
+}
+
+.side-bar {
+  width: 200px; /* Set a fixed width for the sidebar */
+  background-color: #333; /* Example background color */
+  color: #fff; 
 }
 
 .main-content {
   flex-grow: 1; /* Allow main content to take up remaining space */
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
 
-.top-page {
-  width: 95%;
-  height: 500px;
-  background-image: url('../../img/toppage.png');
-  align-self: center;
-  background-size: 95%;
+.profile-header {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40%; /* Adjust height as needed */
+  /* border-bottom: 1px solid rgb(246, 219, 219); */
+}
+
+.cover-image {
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  background-image: url('../../img/nature.png'); /* Replace with your cover image path */
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 }
 
-.info {
-  width: 95%;
-  height: 500px;
+.avatar-container {
+  position: absolute;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url('../../img/ducavatar.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 5px solid white; /* Add border for a better visual separation */
+  position: relative;
+}
+
+.profile-avatar .change-avatar-btn {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile-avatar:hover .change-avatar-btn {
+  display: flex;
+  opacity: 1;
+}
+
+.cover-image .change-cover-btn {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cover-image:hover .change-cover-btn {
+  display: flex;
+  opacity: 1;
+}
+
+.profile-username {
+  margin-top: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.profile-details {
+  margin: 10%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.detailed-info {
+  font-size: 16px;
+  width:300px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.basic-info {
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.basic-info h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.profile-info .title {
+  margin-right: 10px;
+}
+/* 
+.profile-info .content {
+  margin-left: 5%;
+} */
+
+.profile-info .info-icon {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.profile-info p {
+  margin: 0;
+  color: #333;
+  word-break: break-all;
+}
+
+.profile-info a:hover {
+  text-decoration: underline;
+}
+
+.basic-info .profile-info:last-child {
+  justify-content: flex-end;
+}
+
+.basic-info .profile-info:last-child p {
+  font-size: 12px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.change-detail-info-button, .change-basic-info-button {
+  margin: 5%;
   align-self: center;
-  margin-top: -40px;
-  background-image: url('../../img/info.png');
-  background-size: 78%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Change info button */
-.change-info-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px; /* Adjust width as needed */
-  height: 40px; /* Adjust height as needed */
-  background-color: #191919; /* Button background color */
-  color: white;
-  border: none;
+  width: 100px;
+  background-color: #FF698D;
   border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none; /* Remove underline from text */
-  margin: 10px auto; /* Center align the button and add some top margin */
-  margin-top: 37%;
-  z-index: 1;
-}
-
-.change-info-button p {
-  margin: 0 10px; /* Space between icon and text */
-}
-
-.change-info-button svg {
-  font-size: 18px; /* Adjust icon size */
-}
-
-.change-cover-button {
-  display: flex;
+  padding: 5px;
   align-items: center;
-  justify-content: center;
-  width: 150px; /* Adjust width as needed */
-  height: 40px; /* Adjust height as needed */
-  background-color: #191919; /* Button background color */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none; /* Remove underline from text */
-  margin-top: 30%;
-  margin-left: 85%;
-}
-
-.change-cover-button p {
-  margin: 0 10px; /* Space between icon and text */
-}
-
-.change-cover-button svg {
-  font-size: 18px; /* Adjust icon size */
-}
-
-.change-avatar-button {
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 170px;
-  height: 40px;
-  background-color: #191919;
-  color: white;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
-  text-decoration: none;
-  position: absolute; /* Ensure button's position is absolute */
-  margin-top: 5%;
-  margin-left: 12.5%;
-   /* Ensure button is above other elements */
-}
-
-.change-avatar-button p {
-  margin: 0 10px;
-}
-
-.change-avatar-button svg {
-  font-size: 18px;
 }
 
 .modal-overlay {
@@ -156,150 +242,6 @@
   justify-content: space-between;
 }
 
-.info-section {
-  flex: 1;
-  margin-right: 20px;
+.onInput input {
+  width: 300px
 }
-
-.input-field {
-  margin-bottom: 20px;
-}
-
-.rounded-input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  outline: none;
-}
-
-.modal-footer {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.rounded-button {
-  padding: 10px 20px;
-  background-color: #191919;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  outline: none;
-}
-
-.security {
-  width: 90%;
-  height: 500px;
-  margin-left: 15%;
-  align-self: center;
-  margin-top: -20px;
-  background-image: url('../../img/secu.png');
-  background-size: 55%;
-  background-position: left;
-  background-repeat: no-repeat;
-}
-
-.change-password-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px; /* Adjust width as needed */
-  height: 40px; /* Adjust height as needed */
-  background-color: #191919; /* Button background color */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none; /* Remove underline from text */
-  margin-top: 33%;
-  margin-left: 1%;
-}
-
-.change-password-button p {
-  margin: 0 10px; /* Space between icon and text */
-}
-
-.change-password-button svg {
-  font-size: 18px; /* Adjust icon size */
-}
-
-
-.security {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.security .change-password-button {
-  display: flex;
-  align-items: center;
-}
-
-.security .change-password-button p {
-  margin-left: 8px;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1500;
-}
-
-.password-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid #dee2e6;
-  border-radius: 4px;
-  z-index: 2000;
-  width: 400px;
-  max-height: 90vh;
-  overflow-y: auto;
-}
-
-.password-modal-content {
-  position: relative;
-  padding: 20px;
-}
-
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.modal-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.confirm-button {
-  background-color: #191919;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.cancel-button {
-  background-color: #FF698D;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-
