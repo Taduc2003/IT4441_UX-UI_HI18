@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SideBar.css";
 import logo from "../img/logo.png";
 import { IoBookOutline } from "react-icons/io5";
@@ -11,12 +11,22 @@ import { IoMdSettings } from "react-icons/io";
 import { CiLogout } from "react-icons/ci";
 import { FaThLarge } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for open/close
+
 const Sidebar = () => {
+  const [isOpen, setIsOpen] = useState(true); // State to manage the sidebar open/close
   const location = useLocation();
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <>
-      <div className="sidebar">
+      <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
+        <button className="toggle-button" onClick={toggleSidebar}>
+          <FaBars />
+        </button>
         <div className="logo-menu">
           <div className="fin-ebank-io">
             <img src={logo} alt="Logo" className="logo" />
@@ -90,14 +100,6 @@ const Sidebar = () => {
               <CiLogout className="menu-icon" />
               <div className="menu-text">Logout</div>
             </Link>
-            {/* <Link to="/login">
-              <div className="footer">
-                <div className="logout-button">
-                  <CiLogout className="menu-icon" />
-                  <div className="menu-text">Logout</div>
-                </div>
-              </div>
-            </Link> */}
           </div>
         </div>
       </div>
