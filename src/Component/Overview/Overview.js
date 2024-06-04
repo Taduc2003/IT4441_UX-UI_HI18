@@ -2,7 +2,7 @@ import Header from "../header/Header";
 import Sidebar from "../Sidebar";
 import Graph from "./Graph/Graph";
 import NotificationBar from "./notificationBar/NotificationBar";
-import "./Overview.css"; // Import the CSS file for Admin component
+import "./Overview.css";
 import Schedule from "./Schedule/Schedule";
 const Admin = () => {
   return (

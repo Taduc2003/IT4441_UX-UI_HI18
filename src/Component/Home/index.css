@@ -84,7 +84,13 @@ body {
     margin-top: 50px;
     height: calc(100vh - 160px);
 }
+.home-container{
+   display: flex;
+}
+.home-container .welcome-image{
+    margin-left: 100px;
 
+}
 .welcome-section h2 {
     font-size: 40px;
     font-family: 'Dancing Script', cursive;

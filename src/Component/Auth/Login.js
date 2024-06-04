@@ -3,6 +3,8 @@ import { useState } from "react";
 import "./Login.css";
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import CSS for Toastify
 const Login = () => {
   const [isShowPassword, setIsShowPassword] = useState(false);
   const [email, setEmail] = useState("");
@@ -11,8 +13,21 @@ const Login = () => {
   const handleRegister = () => {
     navigate("/register");
   };
+  const validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
   const handleOverview = () => {
-    navigate("/overview");
+    const isValidateEmail = validateEmail(email);
+    if (isValidateEmail) {
+      toast.success("Đăng nhập thành công!");
+      navigate("/overview");
+    } else {
+      toast.error("Email không hợp lệ!");
+    }
   };
   return (
     <div>
@@ -63,9 +78,10 @@ const Login = () => {
                 Keep me signed in
               </label>
             </div>
-            <button className="button-primary" onClick={handleOverview}>
+            <button className="button-primary" onClick={() => handleOverview()}>
               Đăng nhập
             </button>
+
             <div className="divider">
               <div className="line-10"></div>
               <div className="sign-in-with">hoặc đăng nhập với</div>

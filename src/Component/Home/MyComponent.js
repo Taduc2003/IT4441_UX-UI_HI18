@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./index.css";
-
+import welcome from "../../img/welcome.jpg";
 const MyComponent = () => {
   const navigate = useNavigate();
 
@@ -41,18 +41,23 @@ const MyComponent = () => {
           </nav>
         </div>
       </header>
-      <main className="welcome-section">
-        <h3>Chào mừng bạn đến với HusTracking</h3>
-        <p>Nền tảng quản lý KPI hàng đầu cho giảng viên và sinh viên</p>
-        <div className="buttons">
-          <button className="login-button" onClick={handleLogin}>
-            Đăng nhập
-          </button>
-          <button className="register" onClick={handleRegister}>
-            Đăng ký
-          </button>
+      <div className="home-container">
+        <div className="welcome-section">
+          <h3>Chào mừng bạn đến với HusTracking</h3>
+          <p>Nền tảng quản lý KPI hàng đầu cho giảng viên và sinh viên</p>
+          <div className="buttons">
+            <button className="login-button" onClick={handleLogin}>
+              Đăng nhập
+            </button>
+            <button className="register" onClick={handleRegister}>
+              Đăng ký
+            </button>
+          </div>
         </div>
-      </main>
+        <div className="welcome-image">
+          <img src={welcome} alt="KPI Overview" />
+        </div>
+      </div>
     </div>
   );
 };
