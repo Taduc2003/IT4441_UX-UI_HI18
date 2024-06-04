@@ -7,6 +7,18 @@
     align-items: flex-start;
     justify-content: space-between;
     height: 130vh;
+    transition: width 0.3s ease;
+    /* Add transition for smooth open/close */
+}
+
+.sidebar.closed {
+    width: 60px;
+    /* Adjust width when sidebar is closed */
+}
+
+.sidebar.open {
+    width: 250px;
+    /* Adjust width when sidebar is open */
 }
 
 .logo-menu {
@@ -73,6 +85,10 @@
     font-weight: 600;
 }
 
+.sidebar.closed .logo-menu {
+    display: none;
+}
+
 .footer {
     width: 100%;
 }
@@ -80,7 +96,7 @@
 .menu-item.logout {
     background: #f60c42;
     border-radius: 4px;
-     padding: 12px 16px;
+    padding: 12px 16px;
     display: flex;
     flex-direction: row;
     gap: 12px;
@@ -100,4 +116,30 @@
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
+}
+.toggle-button {
+    position: absolute;
+    top: 0px;
+    /* right: -40px; */
+    /* Adjust this value to position the button correctly */
+    background: #ff698d;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1001;
+    /* Ensure button is above other elements */
+    transition: right 0.3s ease;
+    /* Add transition for smooth movement */
+    margin-left: 225px;
+    width: 40px;
+}
+
+.toggle-button:hover {
+    background: #ff4a6e;
+}
+
+.sidebar.closed .toggle-button {
+    margin-left: 33px;
 }
