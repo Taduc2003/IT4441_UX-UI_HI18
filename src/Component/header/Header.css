@@ -219,3 +219,10 @@
   font-size: 20px;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .taskbar {
+    width: 400px;
+    float: left;
+  }
+}
