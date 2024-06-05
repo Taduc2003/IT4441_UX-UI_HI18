@@ -1,3 +1,4 @@
+/* CSS hiện tại của bạn */
 .sidebar {
     background: #191919;
     padding: 48px 28px;
@@ -8,17 +9,14 @@
     justify-content: space-between;
     height: 130vh;
     transition: width 0.3s ease;
-    /* Add transition for smooth open/close */
 }
 
 .sidebar.closed {
-    width: 60px;
-    /* Adjust width when sidebar is closed */
+    width: 30px;
 }
 
 .sidebar.open {
     width: 250px;
-    /* Adjust width when sidebar is open */
 }
 
 .logo-menu {
@@ -40,8 +38,8 @@
 }
 
 .logo {
-    width: 40px;
-    height: 40px;
+    width: 150px;
+    height: 120px;
 }
 
 .menu {
@@ -60,7 +58,6 @@
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    /* Ensure no underline on links */
 }
 
 .menu-item:hover {
@@ -117,11 +114,10 @@
     line-height: 24px;
     font-weight: 600;
 }
+
 .toggle-button {
     position: absolute;
-    top: 0px;
-    /* right: -40px; */
-    /* Adjust this value to position the button correctly */
+    top: 10px;
     background: #ff698d;
     border: none;
     color: white;
@@ -129,9 +125,7 @@
     border-radius: 4px;
     cursor: pointer;
     z-index: 1001;
-    /* Ensure button is above other elements */
     transition: right 0.3s ease;
-    /* Add transition for smooth movement */
     margin-left: 225px;
     width: 40px;
 }
@@ -142,4 +136,62 @@
 
 .sidebar.closed .toggle-button {
     margin-left: 33px;
+}
+
+/* CSS Responsive cho sidebar */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar.closed {
+        width: 0;
+        overflow: hidden;
+        /* Thu nhỏ hoàn toàn khi đóng */
+    }
+
+    .sidebar.open {
+        width: 200px;
+    }
+
+    .toggle-button {
+        margin-left: 175px;
+    }
+
+    .sidebar.closed .toggle-button {
+        margin-left: 0px;
+    }
+
+    .logo {
+        width: 150px;
+        height: 120px;
+    }
+
+    .menu-item {
+        padding: 8px 12px;
+        width: 150px;
+    }
+
+    .menu-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .menu-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .logout-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .logout-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+        .sidebar.closed .toggle-button {
+            margin-left: 30px;
+        }
 }

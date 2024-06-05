@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./SideBar.css";
-import logo from "../img/logo.png";
+import logo from "../img/logo2.png";
 import { IoBookOutline } from "react-icons/io5";
 import { GoSearch } from "react-icons/go";
 import { FaHeart } from "react-icons/fa6";
@@ -11,10 +11,9 @@ import { IoMdSettings } from "react-icons/io";
 import { CiLogout } from "react-icons/ci";
 import { FaThLarge } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for open/close
-
+import { FaBars, FaTimes } from "react-icons/fa";
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(true); // State to manage the sidebar open/close
+  const [isOpen, setIsOpen] = useState(true);
   const location = useLocation();
 
   const toggleSidebar = () => {
@@ -30,7 +29,6 @@ const Sidebar = () => {
         <div className="logo-menu">
           <div className="fin-ebank-io">
             <img src={logo} alt="Logo" className="logo" />
-            HusTracking
           </div>
           <div className="menu">
             <Link
