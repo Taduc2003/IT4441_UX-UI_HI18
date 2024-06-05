@@ -39,19 +39,19 @@ const Header = () => {
   const navigate = useNavigate();
 
   const handleProfileClick = () => {
-    navigate('/personal');
+    navigate("/personal");
   };
 
   const handleSettingsClick = () => {
-    navigate('/settings');
+    navigate("/settings");
   };
 
   const handleLogoutClick = () => {
-    navigate('/login');
+    navigate("/login");
   };
 
   const toggleNotifications = () => {
-    setShowNotifications(prevState => !prevState);
+    setShowNotifications((prevState) => !prevState);
   };
 
   const handleNotificationClick = (notification) => {
@@ -93,20 +93,33 @@ const Header = () => {
             </div>
           )}
         </div>
-        <div className="user">
+        <div className="user" onClick={handleProfileClick}>
           <div className="userInfo">
-            <div className="job">
-              <h4>Tá Đức</h4>
-            </div>
+            <div className="avatar"></div>
+            <div className="username">Tá Đức</div>
           </div>
         </div>
-        <div className="moreInfo" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+
+        <div
+          className="moreInfo"
+          onClick={() => {
+            console.log("clicked");
+            setIsDropdownOpen(!isDropdownOpen);
+            console.log(isDropdownOpen);
+          }}
+        >
           <GoTriangleDown />
           {isDropdownOpen && (
             <div className="dropdown-menu">
-              <div className="menu-choice" onClick={handleProfileClick}>Cá nhân</div>
-              <div className="menu-choice" onClick={handleSettingsClick}>Cài đặt</div>
-              <div className="menu-choice" onClick={handleLogoutClick}>Đăng xuất</div>
+              <div className="menu-choice" onClick={handleProfileClick}>
+                Cá nhân
+              </div>
+              <div className="menu-choice" onClick={handleSettingsClick}>
+                Cài đặt
+              </div>
+              <div className="menu-choice" onClick={handleLogoutClick}>
+                Đăng xuất
+              </div>
             </div>
           )}
         </div>
@@ -116,7 +129,9 @@ const Header = () => {
           <div className="overlay" onClick={closeNotificationModal}></div>
           <div className="notification-modal">
             <div className="notification-modal-content">
-              <span className="close-button" onClick={closeNotificationModal}>x</span>
+              <span className="close-button" onClick={closeNotificationModal}>
+                x
+              </span>
               <h2>{selectedNotification.title}</h2>
               <p>{selectedNotification.time}</p>
               <p>{selectedNotification.content}</p>

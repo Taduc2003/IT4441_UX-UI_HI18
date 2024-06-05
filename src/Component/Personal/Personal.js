@@ -2,175 +2,225 @@ import React, { useState } from "react";
 import Sidebar from "../Sidebar";
 import "./Personal.css";
 import Header from "../header/Header";
-import { FaPen } from "react-icons/fa";
-import DatePicker from "react-datepicker";
+import { MdMailOutline, MdPhone } from "react-icons/md";
+import { IoGlobeOutline, IoLocationOutline } from "react-icons/io5";
 import "react-datepicker/dist/react-datepicker.css";
 
 const Personal = () => {
+
+  const profile = {
+    name: "Tá Đức",
+    email: "guannguyen5691@gmail.com",
+    phone: "03696969696",
+    address: "Tạ Quang Bửu, Bách Khoa, Hai Bà Trưng, Hà Nội",
+    facebook: "https://www.facebook.com/guan.nguyenhoang25/",
+    dob: new Date("1996-01-25"),
+    jobTitle: "Giảng viên đại học",
+    institution: "Trường CNTT & TT, Đại học Bách khoa Hà Nội",
+    joinDate: new Date("2023-05-20"),
+    primaryEmail: "guannguyen5691@gmail.com",
+    backupEmail: "guandz1234@gmail.com",
+    avatar: "../../img/ducavatar.png", // Replace with actual path or URL to the avatar
+  }
+
+  // const handleInputChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setProfile({ ...profile, [name]: value });
+  // };
+
+  // const handleDateChange = (name, date) => {
+  //   setProfile({ ...profile, [name]: date });
+  // };
+
+  const [showBasicModal, setShowBasicModal] = useState(true);
+
+  // Function to toggle modal visibility
+  const toggleBasicModal = () => {
+    setShowBasicModal(!showBasicModal);
+  };
+
+  const [showDetailModal, setShowDetailModal] = useState(true);
+
+  // Function to toggle modal visibility
+  const toggleDetailModal = () => {
+    setShowDetailModal(!showDetailModal);
+  };
+
   // Function to trigger file input click
   const handleFileInputClick = () => {
     document.getElementById("fileInput").click();
   };
 
-  const [showModal, setShowModal] = useState(false);
-
-  // Function to toggle modal visibility
-  const toggleModal = () => {
-    setShowModal(!showModal);
-  };
-
-  const [showPasswordModal, setShowPasswordModal] = useState(false);
-
-  const togglePasswordModal = () => {
-    setShowPasswordModal((prevState) => !prevState);
-  };
-
   return (
-    <div className="container">
-      <Sidebar className="sidebar" />
+    <div className="admin-container">
+      <Sidebar />
 
       <div className="main-content">
         <Header />
-
-        <div className="top-page">
-          <div className="change-cover-button" onClick={handleFileInputClick}>
-            <FaPen />
-            <p>Đổi ảnh bìa</p>
-          </div>
-          <div className="change-avatar-button" onClick={handleFileInputClick}>
-            <FaPen />
-            <p>Đổi ảnh đại diện</p>
-          </div>
-        </div>
-
-        <div className="info">
-          {/* Hidden file input element */}
-          <input type="file" id="fileInput" style={{ display: "none" }} />
-          <div className="change-info-button" onClick={toggleModal}>
-            <FaPen />
-            <p>Sửa thông tin</p>
-          </div>
-        </div>
-
-        <div className="security">
-          <div className="change-password-button" onClick={togglePasswordModal}>
-            <FaPen />
-            <p>Đổi mật khẩu</p>
-          </div>
-        </div>
-
-        {/* Modal */}
-        {showModal && (
-          <div className="modal-overlay">
-            <div className="modal">
-              <div className="modal-content">
-                <div className="modal-header">
-                  <h2>Sửa thông tin</h2>
-                  <span className="close" onClick={toggleModal}>
-                    &times;
-                  </span>
-                </div>
-                <div className="modal-body">
-                  {/* Basic Info */}
-                  <div className="info-section">
-                    <h3>Thông tin cơ bản</h3>
-                    <div className="input-field">
-                      <input
-                        type="text"
-                        placeholder="Gmail"
-                        className="rounded-input"
-                      />
-                    </div>
-                    <div className="input-field">
-                      <input
-                        type="text"
-                        placeholder="Số điện thoại"
-                        className="rounded-input"
-                      />
-                    </div>
-                    <div className="input-field">
-                      <input
-                        type="text"
-                        placeholder="Địa chỉ"
-                        className="rounded-input"
-                      />
-                    </div>
-                    <div className="input-field">
-                      <input
-                        type="text"
-                        placeholder="Link mạng xã hội"
-                        className="rounded-input"
-                      />
-                    </div>
-                  </div>
-                  {/* Detail Info */}
-                  <div className="info-section">
-                    <h3>Thông tin chi tiết</h3>
-                    <div className="input-field">
-                      <DatePicker
-                        selected={new Date()}
-                        placeholderText="Ngày sinh"
-                        className="rounded-input"
-                      />
-                    </div>
-                    <div className="input-field">
-                      <input
-                        type="text"
-                        placeholder="Chức vụ"
-                        className="rounded-input"
-                      />
-                    </div>
-                    <div className="input-field">
-                      <input
-                        type="text"
-                        placeholder="Nơi làm việc"
-                        className="rounded-input"
-                      />
-                    </div>
-                    <div className="input-field">
-                      <DatePicker
-                        selected={new Date()}
-                        placeholderText="Ngày tham gia"
-                        className="rounded-input"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="modal-footer">
-                  <button onClick={toggleModal} className="rounded-button">
-                    Lưu
-                  </button>
-                </div>
+        <div className="profile">
+          <div className="profile-header">
+            {/* <div className="cover-image">
+              <button
+                className="change-cover-btn"
+                onClick={handleFileInputClick}
+              >
+                Đổi ảnh bìa
+              </button>
+            </div> */}
+            <div className="avatar-container">
+              <div className="profile-avatar">
+                <button
+                  className="change-avatar-btn"
+                  onClick={handleFileInputClick}
+                >
+                  Đổi avatar
+                </button>
+                <input type="file" id="fileInput" style={{ display: "none" }} />
               </div>
+              <h1 className="profile-username">Tá Đức</h1>
             </div>
           </div>
-        )}
 
-        {showPasswordModal && (
-          <>
-            <div className="overlay" onClick={togglePasswordModal}></div>
-            <div className="password-modal">
-              <div className="password-modal-content">
-                <span className="close-button" onClick={togglePasswordModal}>
-                  x
-                </span>
-                <h2>Đổi mật khẩu</h2>
-                <input type="password" placeholder="Mật khẩu cũ" />
-                <input type="password" placeholder="Mật khẩu mới" />
-                <input type="password" placeholder="Xác nhận mật khẩu mới" />
-                <div className="modal-buttons">
-                  <button className="confirm-button">Xác nhận</button>
-                  <button
-                    className="cancel-button"
-                    onClick={togglePasswordModal}
+          <div className="profile-details">
+            <div className="detailed-info">
+              {/* <h2>Thông tin chi tiết</h2> */}
+              <div className="profile-info">
+                {showDetailModal ? (
+                  <p>
+                    <span className="title">Chức vụ</span>: {profile.jobTitle}
+                  </p>
+                ) : (
+                  
+                  <div className="onInput">
+                    <span className="title">Chức vụ</span>:
+                      <input type="email" placeholder="Chức vụ" />
+                  </div>
+                )}
+              </div>
+              <div className="profile-info">
+                {showDetailModal ? (
+                  <p>
+                    <span className="title">Nơi làm việc</span>:{" "}
+                    {profile.institution}
+                  </p>
+                ) : (
+                  <div className="onInput">
+                    <span className="title">Nơi làm việc</span>:
+                      <input type="email" placeholder="Nơi làm việc" />
+                  </div>
+                )}
+              </div>
+              <div className="profile-info">
+                {showDetailModal ? (
+                  <p>
+                    <span className="title">Các môn giảng dạy</span>:
+                    <ul>
+                      <li>Trí tuệ nhân tạo</li>
+                      <li>Phát triển phần mềm theo tiêu chuẩn ITSS</li>
+                      <li>Giao diện và trải nghiệm người dùng</li>
+                    </ul>
+                  </p>
+                ) : (
+                  <div className="onInput">
+                    <span className="title">Các môn giảng dạy</span>:
+                      <input type="email" placeholder="Các môn giảng dạy" />
+                  </div>
+                )}
+              </div>
+              {/* <div className="profile-info">
+                <p><span className="title">Email</span>:   {profile.primaryEmail}</p>
+              </div>
+              <div className="profile-info">
+                <p><span className="title">Email dự phòng</span>:   {profile.backupEmail}</p>
+              </div> */}
+              {showDetailModal ? (
+                <div
+                  className="change-basic-info-button"
+                  onClick={toggleDetailModal}
+                >
+                  Thay đổi
+                </div>
+              ) : (
+                <div className="button-group">
+                  <div
+                    className="change-basic-info-button"
+                    onClick={toggleDetailModal}
+                  >
+                    Lưu
+                  </div>
+                  <div
+                    className="change-basic-info-button"
+                    onClick={toggleDetailModal}
                   >
                     Hủy
-                  </button>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
-          </>
-        )}
+
+            <div className="basic-info">
+              <h2>Thông tin liên lạc</h2>
+              <div className="profile-info">
+                <MdMailOutline className="info-icon" />
+                {showBasicModal ? (
+                  <p>Email: {profile.email}</p>
+                ) : (
+                  <input type="email" placeholder="Email" />
+                )}
+              </div>
+              <div className="profile-info">
+                <MdPhone className="info-icon" />
+                {showBasicModal ? (
+                  <p>SĐT: {profile.phone}</p>
+                ) : (
+                  <input type="tel" placeholder="SĐT" />
+                )}
+              </div>
+              <div className="profile-info">
+                <IoLocationOutline className="info-icon" />
+                {showBasicModal ? (
+                  <p>Địa chỉ: {profile.address}</p>
+                ) : (
+                  <input type="text" placeholder="Địa chỉ" />
+                )}
+              </div>
+              <div className="profile-info">
+                <IoGlobeOutline className="info-icon" />
+
+                {showBasicModal ? (
+                  <p>
+                    Facebook: <a href={profile.facebook}>{profile.facebook}</a>
+                  </p>
+                ) : (
+                  <input type="text" placeholder="Địa chỉ" />
+                )}
+              </div>
+              {showBasicModal ? (
+                <div
+                  className="change-basic-info-button"
+                  onClick={toggleBasicModal}
+                >
+                  Thay đổi
+                </div>
+              ) : (
+                <div className="button-group">
+                  <div
+                    className="change-basic-info-button"
+                    onClick={toggleBasicModal}
+                  >
+                    Lưu
+                  </div>
+                  <div
+                    className="change-basic-info-button"
+                    onClick={toggleBasicModal}
+                  >
+                    Hủy
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
