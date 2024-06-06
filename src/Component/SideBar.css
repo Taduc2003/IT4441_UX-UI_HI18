@@ -128,6 +128,7 @@
     transition: right 0.3s ease;
     margin-left: 225px;
     width: 40px;
+    display: none;
 }
 
 .toggle-button:hover {
@@ -139,7 +140,7 @@
 }
 
 /* CSS Responsive cho sidebar */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 440px) {
     .sidebar {
         width: 200px;
     }
@@ -147,7 +148,7 @@
     .sidebar.closed {
         width: 0;
         overflow: hidden;
-        /* Thu nhỏ hoàn toàn khi đóng */
+        background: fixed;
     }
 
     .sidebar.open {
@@ -156,6 +157,7 @@
 
     .toggle-button {
         margin-left: 175px;
+        display: inline;
     }
 
     .sidebar.closed .toggle-button {
