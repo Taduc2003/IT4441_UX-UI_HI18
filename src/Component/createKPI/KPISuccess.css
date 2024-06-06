@@ -1,5 +1,12 @@
 /* KPISuccess.css */
-.kpi-step { /* Giữ nguyên các style từ KPISetup.css */ }
+
+.success-content {
+  margin: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .success-icon {
   display: flex;
