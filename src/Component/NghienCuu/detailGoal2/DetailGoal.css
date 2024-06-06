@@ -1,41 +1,32 @@
-.top-contents{
+.detail-container {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    width: 650px;
-    height: 258px;
-}
-
-.noidung {
     background-color: white;
-    padding: 20.4px;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    box-shadow: 0px 20px 25px 0px rgba(76, 103, 100, 0.1), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 20px;
+}
+
+.detail-title {
+    color: var(--gray-02, #878787);
+    text-align: left;
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.detail-wrapper {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: relative;
-    width: 650px;
-    height: 258px;
-    border-radius: 8px;
-    margin-top: 5px;
-    box-shadow: 0em 0em 1em 0em;
-
-}
-.detail-title {
-    text-align: left;
-    color: var(--gray-02);
-    font-size: var(--header-22-32-font-size);
-    letter-spacing: var(--header-22-32-letter-spacing);
-    line-height: var(--header-22-32-line-height);
-    font-style: var(--header-22-32-font-style);
-    font-family: var(--header-22-32-font-family);
-    font-weight: var(--header-22-32-font-weight);
-}
-
-.chevron-rights {
-    flex-shrink: 0;
-    width: 16px;
-    height: 16px;
-    position: relative;
 }
 
 .bills {
@@ -46,7 +37,6 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    
 }
 
 .detailss {
@@ -67,12 +57,11 @@
     min-width: 80px;
 }
 
-.semester{
+.semester {
     color: rgba(25, 25, 25, 0.7);
     text-align: center;
     font-family: "Inter-ExtraBold", sans-serif;
-    font-size: 20px;
-    line-height: 32px;
+    line-height: 2rem;
     font-weight: 800;
 }
 
@@ -80,31 +69,34 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+    width: 100%;
 }
 
 .texts {
     display: flex;
     flex-direction: column;
     gap: 2px;
+    width: 100%;
 }
 
 .tenbaibao {
     color: var(--secondary, #525256);
     text-align: left;
     font-family: "Inter-SemiBold", sans-serif;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
     font-weight: 600;
-    width: 350px;
+   
 }
 
 .ketthucs {
     color: var(--gray-03, #9f9f9f);
     text-align: left;
     font-family: "Inter-Regular", sans-serif;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 0.75rem;
+    line-height: 1rem;
     font-weight: 400;
+    width: 100%;
 }
 
 .amounts {
@@ -115,17 +107,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 15px;
-    width: 120px;
+    min-width: 100px;
+    width: 10%;
 }
 
 .trangthai {
-    color: var(--secondary, #525256);
+    color: var(--secondary, #d448e779);
     text-align: center;
     font-family: "Inter-Bold", sans-serif;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     font-weight: 700;
-    width: 100px;
-    height: 50px;
+    width: 100%;
+}
+
+.view-all-button {
+    background-color:white;
+    color:rgba(255, 99, 104, 0.5);
+    border-radius: 4px;
+    cursor: pointer;   
+    margin-top: 10px;
+    align-self: center;
+    border: 2px solid white;
+    /* width: 8rem; */
+}
+
+.view-all-button:hover {
+    background-color: white;
 }

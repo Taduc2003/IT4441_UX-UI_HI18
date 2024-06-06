@@ -1,24 +1,42 @@
-.overview-container{
+/* Styles for the overview container and research title */
+.overview-container-research {
     display: flex;
-    
+    flex-direction: row;
+    height: 100vh;
 }
 
-.titles{
-    color: #000;
-    font-family: "Inter-Bold";
-    font-size: 34px;
-}
-
-.content-doc{
-    display: block;
-}
-
-.ngang{
+.main-content-research {
+    flex-grow: 1; /* Allow main content to take up remaining space */
     display: flex;
-    flex-direction: row; /* Sắp xếp các phần tử theo hàng ngang */
-    justify-content: space-between; /* Khoảng cách đều giữa các phần tử */
-    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
-    gap: 50px; /* Khoảng cách giữa các phần tử, tùy chỉnh theo nhu cầu */
-    margin-top: 20px;
-    margin-bottom: 40px;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.titles-research {
+    margin: 10px 0;
+}
+
+.thanh-con-ngang-research {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping to a new line */
+    gap: 1rem;
+    overflow-x: auto;
+    min-height: 400px;
+}
+
+.upload-research-button {
+    background-color: rgba(255, 99, 104, 0.5);
+    color: white;
+    font-family: "Inter-Bold", sans-serif;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 150px;
+    border: 2px solid rgba(255, 99, 104, 0.5);
+}
+
+.upload-research-button:hover {
+    background-color: rgba(255, 99, 104, 0.5);
 }

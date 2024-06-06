@@ -1,0 +1,20 @@
+.goals-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    gap: 1.5rem;
+}
+  
+  .goal-box {
+    display: flex;
+    min-height: 400px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .goals-container {
+      flex-direction: column;
+    }
+
+  }
+  
