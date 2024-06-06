@@ -20,16 +20,20 @@
     /* align-items: center; */
 }
 
-.research-ngang{
+.research-graph .content-ngang{
     display: flex;
-}
-.thanh-con-ngang-research {
     width: 100%;
+}
+
+.research-graph .content-doc{
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping to a new line */
-    gap: 1rem;
-    overflow-x: auto;
-    min-height: 400px;
+    flex-direction: column;
+    width: 70%;
+}
+
+.research-graph .task-list {
+    flex: 1;
+    width: 30%;
 }
 
 .upload-research-button {
@@ -47,3 +51,20 @@
 .upload-research-button:hover {
     background-color: rgba(255, 99, 104, 0.5);
 }
+
+@media (max-width: 600px){
+    .research-graph .content-ngang{
+        width: 100% !important;
+        flex-direction: column;
+    }
+
+    .research-graph .content-doc{
+        width: 90%;
+    }
+    
+    .research-graph .task-list {
+        margin-left: 20px;
+        width: 100%;
+    }
+}
+

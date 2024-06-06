@@ -63,12 +63,14 @@ const Admin = () => {
               Tải minh chứng
             </button>
             <GoalBar data1={data1} data2={data2} data3={data3} />
-            <div className="research-ngang">
-              <div className="research-doc">
+            <div className="content-ngang">
+              <div className="content-doc">
                 <ChartComponent data={researchChart} />
                 <DetailGoal data={researchDetail} />
               </div>
-              <TaskList />
+              <div className="task-list">
+              <TaskList/>
+              </div>
             </div>
             {uploadVisible && <UploadFileOrImg onClose={toggleUpload} />}
           </div>

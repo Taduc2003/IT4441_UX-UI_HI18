@@ -7,6 +7,7 @@ import ChartComponent from "../NghienCuu/ColumnChart/ChartComponet";
 import DetailGoal from "../NghienCuu/detailGoal2/DetailGoal";
 import Header from "../header/Header";
 import UploadFileOrImg from "../NghienCuu/uploadFile/UploadFileOrImg";
+import TaskList from "./TastListService/TaskListService";
 
 const Admin = () => {
   const data1 = {
@@ -38,9 +39,9 @@ const Admin = () => {
     typee: "hoạt động phục vụ tham gia",
     semester: "2023.1",
     name1: "Hoạt động tình nghiện vì trẻ em nghèo ",
-    status1: "Đã hoàn thành",
-    name2: 'Talk-show: "Thất bại là thử thách" ',
-    status2: "Chưa hoàn thành",
+    status1: "Chưa hoàn thành",
+    name2: 'Talk-show: "Nóng lên toàn cầu"',
+    status2: "Đã hoàn thành",
   };
   const [uploadVisible, setUploadVisible] = useState(false);
   const toggleUpload = () => {
@@ -60,8 +61,15 @@ const Admin = () => {
               Tải minh chứng
             </button>
             <GoalBar data1={data1} data2={data2} data3={data3} />
-            <ChartComponent data={serviceChart} />
-            <DetailGoal data={serviceDetail} />
+            <div className="content-ngang">
+              <div className="content-doc">
+                <ChartComponent data={serviceChart} />
+                <DetailGoal data={serviceDetail} />
+              </div>
+              <div className="task-list">
+              <TaskList/>
+              </div>
+            </div>
             {uploadVisible && <UploadFileOrImg onClose={toggleUpload} />}
           </div>
         </div>

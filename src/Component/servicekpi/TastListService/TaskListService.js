@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CircleProgress from "./CircleProgressResearch/CircleProgress.js";
+import CircleProgress from "./CircleProgressService/CircleProgress.js";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "./TaskList.css";
@@ -12,60 +12,49 @@ const TaskList = () => {
   const tasks = {
     completed: [
       {
-        title: "Đánh giá tài liệu về học máy cho nhận dạng hình ảnh",
-        date: "20/06/2024",
+        title: 'Talk-show: "Nóng lên toàn cầu"',
+        date: "08/07/2024",
+        percent: 100,
         subtasks: [
-          { name: "Xác định bài báo nghiên cứu có liên quan", deadline: "19/06/2024", status: "Hoàn thành" },
-          { name: "Tóm tắt những phát hiện chính", deadline: "19/06/2024", status: "Hoàn thành" },
-        ],
-      },
-      {
-        title: "Thu thập dữ liệu cho nghiên cứu về giao diện bài báo nghiên cứu",
-        date: "15/06/2024",
-        percent: 80,
-        subtasks: [
-          { name: "Tuyển dụng người tham gia", deadline: "14/06/2024", status: "Hoàn thành" },
-          { name: "Chuẩn bị công cụ khảo sát", deadline: "13/06/2024", status: "Hoàn thành" },
-          { name: "Thực hiện thí nghiệm sơ bộ", deadline: "12/06/2024", status: "Hoàn thành" },
-          { name: "Cải thiện khảo sát dựa trên kết quả thí nghiệm sơ bộ", deadline: "11/06/2024", status: "Chưa hoàn thành" },
+          { name: "Chuẩn bị kịch bản", deadline: "30/06/2024", status: "Hoàn thành" },
+          {  name: "Tạo bài viết giới thiệu talkshow", deadline: "26/06/2024", status: "Hoàn thành"  },
         ],
       },
     ],
     overdue: [
       {
-        title: "Chuẩn bị bài thuyết trình cho hội thảo nghiên cứu",
+        title: "Tham gia hoạt động dọn dẹp môi trường",
         date: "10/06/2024",
         percent: 50,
         subtasks: [
-          { name: "Lập dàn bài thuyết trình", deadline: "09/06/2024", status: "Quá hạn" },
-          { name: "Soạn thảo những điểm chính và hình ảnh", deadline: "08/06/2024", status: "Chưa hoàn thành" },
+          { name: "Đăng ký tham gia", deadline: "09/06/2024", status: "Hoàn thành" },
+          { name: "Chuẩn bị dụng cụ dọn dẹp", deadline: "10/06/2024", status: "Chưa hoàn thành" },
         ],
       },
     ],
     incomplete: [
       {
-        title: "Phân tích dữ liệu từ nghiên cứu người dùng",
+        title: "Tổ chức buổi quyên góp sách cho trẻ em mồ côi",
         date: "27/06/2024",
-        percent: 0,
+        percent: 20,
         subtasks: [
-          { name: "Dọn dẹp và xử lý sơ bộ dữ liệu", deadline: "N/A" },
-          { name: "Thực hiện phân tích thống kê", deadline: "N/A" },
-          { name: "Diễn giải kết quả và rút ra kết luận", deadline: "N/A" },
+          { name: "Liên hệ với các nhà hảo tâm", deadline: "26/06/2024", status: "Chưa hoàn thành" },
+          { name: "Chuẩn bị địa điểm và vật dụng", deadline: "25/06/2024", status: "Chưa hoàn thành" },
+          { name: "Quảng bá sự kiện", deadline: "24/06/2024", status: "Chưa hoàn thành" },
         ],
       },
       {
-        title: "Viết bản thảo bài báo nghiên cứu",
+        title: "Tham gia chương trình tình nguyện xây nhà cho người nghèo",
         date: "04/07/2024",
         percent: 0,
         subtasks: [
-          { name: "Phát triển câu hỏi nghiên cứu và phương pháp luận", deadline: "N/A" },
-          { name: "Viết phần tổng quan tài liệu", deadline: "N/A" },
-          { name: "Trình bày kết quả và thảo luận", deadline: "N/A" },
+          { name: "Đăng ký tham gia", deadline: "03/07/2024", status: "Chưa hoàn thành" },
+          { name: "Chuẩn bị dụng cụ xây dựng", deadline: "02/07/2024", status: "Chưa hoàn thành" },
+          { name: "Hỗ trợ xây dựng nhà", deadline: "04/07/2024", status: "Chưa hoàn thành" },
         ],
       },
     ],
   };
-
   const getColor = (percent) => {
     if (percent <= 25) return "red";
     if (percent < 100) return "orange";
