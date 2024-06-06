@@ -1,6 +1,6 @@
 .admin-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 100vh; /* Ensure the container takes full height */
   }
   
@@ -11,10 +11,16 @@
   }
   
   .main-content {
-    flex-grow: 1; /* Allow main content to take up remaining space */
+    flex-grow: 1; 
     display: flex;
-    flex-direction: column;
-    padding-left: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0;
+  }
+
+  .overview-content {
+    width: 100%;
+    
   }
   
   .overview-heading {
@@ -24,15 +30,3 @@
   .notification-bar-wrapper {
     margin-top: 0px;
   }
-
-  /* .graph-wrapper {
-    margin-top: 20px;
-  } */
-
-  /* @media (max-width: 768px) {
-    .graph-wrapper {
-      width: 500px;
-      float: right;
-    }
-  } */
-  

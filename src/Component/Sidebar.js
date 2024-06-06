@@ -22,10 +22,10 @@ const Sidebar = () => {
 
   return (
     <>
+      <button className="toggle-button" onClick={toggleSidebar}>
+        <FaBars />
+      </button>
       <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
-        <button className="toggle-button" onClick={toggleSidebar}>
-          <FaBars />
-        </button>
         <div className="logo-menu">
           <div className="fin-ebank-io">
             <img src={logo} alt="Logo" className="logo" />

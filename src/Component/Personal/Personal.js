@@ -58,10 +58,12 @@ const Personal = () => {
 
   return (
     <div className="admin-container">
-      <Sidebar />
+      <div className="header-wrapper">
+        <Header />
+      </div>
 
       <div className="main-content">
-        <Header />
+        <Sidebar />
         <div className="profile">
           <div className="profile-header">
             {/* <div className="cover-image">
