@@ -1,7 +1,7 @@
 /* CSS hiện tại của bạn */
 .sidebar {
     background: #191919;
-    padding: 48px 28px;
+    padding: 20px 15px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -12,7 +12,7 @@
 }
 
 .sidebar.closed {
-    width: 30px;
+    background: fixed;
 }
 
 .sidebar.open {
@@ -126,20 +126,20 @@
     cursor: pointer;
     z-index: 1001;
     transition: right 0.3s ease;
-    margin-left: 225px;
+    /* margin-left: 225px; */
     width: 40px;
-    display: none;
+    /* display: none; */
 }
 
 .toggle-button:hover {
     background: #ff4a6e;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .toggle-button {
         display: none;
     }
-}
+} */
 
 /* CSS Responsive cho sidebar */
 @media screen and (max-width: 440px) {
@@ -158,7 +158,7 @@
     }
 
     .toggle-button {
-        margin-left: 175px;
+        /* margin-left: 175px; */
         display: inline;
     }
 
