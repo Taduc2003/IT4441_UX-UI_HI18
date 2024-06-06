@@ -1,7 +1,7 @@
 /* CSS hiện tại của bạn */
 .sidebar {
     background: #191919;
-    padding: 20px 15px;
+    padding: 10px 5px;
     display: flex;
     flex-direction: column;
     gap: 20px;

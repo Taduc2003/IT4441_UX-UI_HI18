@@ -8,7 +8,6 @@ import { IoGlobeOutline, IoLocationOutline } from "react-icons/io5";
 import "react-datepicker/dist/react-datepicker.css";
 
 const Personal = () => {
-
   const profile = {
     name: "Tá Đức",
     email: "guannguyen5691@gmail.com",
@@ -22,7 +21,7 @@ const Personal = () => {
     primaryEmail: "guannguyen5691@gmail.com",
     backupEmail: "guandz1234@gmail.com",
     avatar: "../../img/ducavatar.png", // Replace with actual path or URL to the avatar
-  }
+  };
 
   // const handleInputChange = (e) => {
   //   const { name, value } = e.target;
@@ -35,7 +34,7 @@ const Personal = () => {
 
   const notify = () => {
     toast.success("Thay đổi thành công!");
-  }
+  };
 
   const [showBasicModal, setShowBasicModal] = useState(true);
 
@@ -65,42 +64,30 @@ const Personal = () => {
       <div className="main-content">
         <Sidebar />
         <div className="profile">
-          <div className="profile-header">
-            {/* <div className="cover-image">
+          <div className="avatar-container">
+            <div className="profile-avatar">
               <button
-                className="change-cover-btn"
+                className="change-avatar-btn"
                 onClick={handleFileInputClick}
               >
-                Đổi ảnh bìa
+                Đổi avatar
               </button>
-            </div> */}
-            <div className="avatar-container">
-              <div className="profile-avatar">
-                <button
-                  className="change-avatar-btn"
-                  onClick={handleFileInputClick}
-                >
-                  Đổi avatar
-                </button>
-                <input type="file" id="fileInput" style={{ display: "none" }} />
-              </div>
-              <h1 className="profile-username">Tá Đức</h1>
+              <input type="file" id="fileInput" style={{ display: "none" }} />
             </div>
+            <h1 className="profile-username">Tá Đức</h1>
           </div>
 
           <div className="profile-details">
             <div className="detailed-info">
-              {/* <h2>Thông tin chi tiết</h2> */}
               <div className="profile-info">
                 {showDetailModal ? (
                   <p>
                     <span className="title">Chức vụ</span>: {profile.jobTitle}
                   </p>
                 ) : (
-                  
                   <div className="onInput">
                     <span className="title">Chức vụ</span>:
-                      <input type="email" placeholder="Chức vụ" />
+                    <input type="email" placeholder="Chức vụ" />
                   </div>
                 )}
               </div>
@@ -113,7 +100,7 @@ const Personal = () => {
                 ) : (
                   <div className="onInput">
                     <span className="title">Nơi làm việc</span>:
-                      <input type="email" placeholder="Nơi làm việc" />
+                    <input type="email" placeholder="Nơi làm việc" />
                   </div>
                 )}
               </div>
@@ -130,16 +117,10 @@ const Personal = () => {
                 ) : (
                   <div className="onInput">
                     <span className="title">Các môn giảng dạy</span>:
-                      <input type="email" placeholder="Các môn giảng dạy" />
+                    <input type="email" placeholder="Các môn giảng dạy" />
                   </div>
                 )}
               </div>
-              {/* <div className="profile-info">
-                <p><span className="title">Email</span>:   {profile.primaryEmail}</p>
-              </div>
-              <div className="profile-info">
-                <p><span className="title">Email dự phòng</span>:   {profile.backupEmail}</p>
-              </div> */}
               {showDetailModal ? (
                 <div
                   className="change-basic-info-button"
@@ -151,7 +132,10 @@ const Personal = () => {
                 <div className="button-group">
                   <div
                     className="change-basic-info-button"
-                    onClick={() => { toggleDetailModal(); notify(); }}
+                    onClick={() => {
+                      toggleDetailModal();
+                      notify();
+                    }}
                   >
                     Lưu
                   </div>
@@ -213,7 +197,10 @@ const Personal = () => {
                 <div className="button-group">
                   <div
                     className="change-basic-info-button"
-                    onClick={() => { toggleBasicModal(); notify(); }}
+                    onClick={() => {
+                      toggleBasicModal();
+                      notify();
+                    }}
                   >
                     Lưu
                   </div>
