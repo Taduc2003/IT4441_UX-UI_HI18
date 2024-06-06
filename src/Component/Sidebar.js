@@ -13,7 +13,7 @@ import { FaThLarge } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(window.innerWidth < 768 ? false : true);
   const location = useLocation();
 
   const toggleSidebar = () => {
