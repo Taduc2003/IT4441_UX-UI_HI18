@@ -1,179 +1,254 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-body {
+.schedule-global-container {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.container {
+.schedule-container {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     margin: 20px;
-    justify-content: space-between;
+    gap: 20px;
 }
 
-.schedule {
+.schedule-schedule {
+    flex: 1 1 60%;
     background: white;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 68.1%;
-    height: 42.5%;
+    overflow-x: auto;
 }
 
-.schedule h2 {
+.schedule-schedule h2 {
     margin: 0;
-    font-size: 24px;
+    font-size: 2vw; /* Font size điều chỉnh theo chiều rộng màn hình */
 }
 
-table {
+.schedule-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
-th, td {
-    padding: 12px;
+.schedule-th, .schedule-td {
+    padding: 1vw;
     text-align: left;
     border-bottom: 1px solid #ddd;
     min-width: 50px;
     white-space: nowrap;
 }
 
-th {
+.schedule-th {
     background-color: #f2f2f2;
 }
 
-.status {
+.schedule-td select {
+    border: none;
+    padding: 0.5vw 1vw;
     border-radius: 5px;
-    padding: 5px 10px;
+    font-size: 1vw; /* Font size điều chỉnh theo chiều rộng màn hình */
     color: white;
-}
-
-.status.complete {
-    background-color: #4CAF50;
-}
-
-.status.cancelled {
-    background-color: #f44336;
-}
-
-.status.incomplete {
     background-color: #FF9800;
 }
 
+.schedule-td select option {
+    color: black;
+    background-color: white;
+}
 
-.wrapper {
-    width: 400px;
-    height: 100%;
+.schedule-td select.complete {
+    background-color: #4CAF50 !important;
+}
+
+.schedule-td select.cancelled {
+    background-color: #f44336 !important;
+}
+
+.schedule-td select.incomplete {
+    background-color: #FF9800 !important;
+}
+
+.schedule-wrapper {
+    flex: 1 1 35%;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-}
-
-.wrapper header {
+    padding: 20px;
     display: flex;
-    align-items: center;
-    padding: 25px 30px 10px;
+    flex-direction: column;
     justify-content: space-between;
 }
 
-header .icons {
+.schedule-wrapper header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.schedule-header-icons {
     display: flex;
 }
 
-header .icons span {
-    height: 38px;
-    width: 38px;
-    margin: 0 1px;
+.schedule-header-icons span {
+    height: 5vw; /* Điều chỉnh theo chiều rộng màn hình */
+    width: 5vw; /* Điều chỉnh theo chiều rộng màn hình */
+    margin: 0 0.5vw;
     cursor: pointer;
     color: #878787;
     text-align: center;
-    line-height: 38px;
-    font-size: 1.9rem;
+    line-height: 5vw; /* Điều chỉnh theo chiều rộng màn hình */
+    font-size: 2vw; /* Font size điều chỉnh theo chiều rộng màn hình */
     user-select: none;
     border-radius: 50%;
 }
 
-.icons span:last-child {
+.schedule-header-icons span:last-child {
     margin-right: -10px;
 }
 
-header .icons span:hover {
+.schedule-header-icons span:hover {
     background: #f2f2f2;
 }
 
-header .current-date {
-    font-size: 1.45rem;
+.schedule-header-current-date {
+    font-size: 2vw; /* Font size điều chỉnh theo chiều rộng màn hình */
     font-weight: 500;
+    margin: 10px;
 }
 
-.calendar {
+.schedule-calendar {
     padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.calendar ul {
+.schedule-calendar ul {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     text-align: center;
 }
 
-.calendar .days {
-    margin-bottom: 20px;
+.schedule-calendar-days {
+    margin-bottom: -10px;
 }
 
-.calendar li {
+.schedule-calendar li {
     color: #333;
     width: calc(100% / 7);
-    font-size: 1.07rem;
+    font-size: 1.5vw; /* Font size điều chỉnh theo chiều rộng màn hình */
 }
 
-.calendar .weeks li {
+.schedule-calendar-weeks li {
     font-weight: 500;
     cursor: default;
 }
 
-.calendar .days li {
+.schedule-calendar-days li {
     z-index: 1;
     cursor: pointer;
     position: relative;
-    margin-top: 30px;
+    margin-top: 1vw; /* Điều chỉnh theo chiều rộng màn hình */
 }
 
-.days li.inactive {
+.schedule-calendar-days li.inactive {
     color: #aaa;
 }
 
-.days li.active {
+.schedule-calendar-days li.active {
     color: #fff;
 }
 
-.days li::before {
+.schedule-calendar-days li::before {
     position: absolute;
     content: "";
     left: 50%;
     top: 50%;
-    height: 40px;
-    width: 40px;
+    height: 3vw; /* Điều chỉnh theo chiều rộng màn hình */
+    width: 3vw; /* Điều chỉnh theo chiều rộng màn hình */
     z-index: -1;
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }
 
-.days li.active::before {
+.schedule-calendar-days li.active::before {
     background: #9B59B6;
 }
 
-.days li:not(.active):hover::before {
+.schedule-calendar-days li:not(.active):hover::before {
     background: #f2f2f2;
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 431px) {
+    .schedule-container {
+        flex-direction: column;
+    }
+        .schedule-table {
+            width: 350px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+    .schedule-wrapper {
+        width: 350px;
+        margin-bottom: 20px;
+        order: 1;
+        margin-left: -30px; 
+    }
+
+    .schedule-schedule {
+        width: 100%;
+        order: 2;
+        width: 350px;
+        margin-left: -30px;
+    }
+
+    .schedule-schedule h2 {
+        font-size: 5vw; /* Điều chỉnh theo chiều rộng màn hình nhỏ hơn */
+    }
+
+    .schedule-th, .schedule-td {
+        padding: 2vw; /* Điều chỉnh padding cho màn hình nhỏ hơn */
+        font-size: 3vw; /* Điều chỉnh font size cho màn hình nhỏ hơn */
+    }
+
+    .schedule-td select {
+        font-size: 3vw; /* Điều chỉnh font size cho màn hình nhỏ hơn */
+        padding: 2vw 3vw;
+    }
+
+    .schedule-header-current-date {
+        font-size: 4vw; /* Điều chỉnh font size cho màn hình nhỏ hơn */
+    }
+
+    .schedule-header-icons span {
+        height: 7vw; /* Điều chỉnh kích thước cho màn hình nhỏ hơn */
+        width: 7vw; /* Điều chỉnh kích thước cho màn hình nhỏ hơn */
+        line-height: 7vw; /* Điều chỉnh line-height cho màn hình nhỏ hơn */
+        font-size: 4vw; /* Điều chỉnh font size cho màn hình nhỏ hơn */
+    }
+
+    .schedule-calendar {
+        padding: 2vw; /* Điều chỉnh padding cho màn hình nhỏ hơn */
+        margin-left: -30px;
+    }
+
+    .schedule-calendar li {
+        font-size: 3vw; /* Điều chỉnh font size cho màn hình nhỏ hơn */
+    }
+
+    .schedule-calendar-days li {
+        margin-top: 1.5vw; /* Điều chỉnh khoảng cách giữa các hàng trong lịch */
+    }
+
+    .schedule-calendar-days li::before {
+        height: 5vw; /* Điều chỉnh kích thước của ô tròn */
+        width: 5vw; /* Điều chỉnh kích thước của ô tròn */
+    }
 }
