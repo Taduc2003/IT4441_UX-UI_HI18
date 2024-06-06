@@ -18,6 +18,7 @@ const Teach = () => {
       <div className="main-content">
         <Sidebar />
         <div className="teach-content">
+          <h1 className="teach-heading">Giảng dạy</h1>
           <div className="teach-kpi">
             <TeachKpi />
           </div>

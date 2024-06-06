@@ -3,14 +3,25 @@
     
 }
 
-.titles{
-    color: #000;
-    font-family: "Inter-Bold";
-    font-size: 34px;
+.research-heading {
+    margin: 10px 0;
 }
 
 .content-doc{
     display: block;
+}
+
+.research-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.research-graph {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .ngang{
