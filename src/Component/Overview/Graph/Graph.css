@@ -76,13 +76,13 @@ body {
   background: linear-gradient(to right, #ffffff, #FF9C9C);
 } */
 
-.research-content {
+/* .research-content {
   background: linear-gradient(to right, #ffffff, #01BCF4);
 }
 
 .serve-content {
   background: linear-gradient(to right, #ffffff, #FFC042);
-}
+} */
 
 @media (max-width: 768px) {
   .graphs-container {
