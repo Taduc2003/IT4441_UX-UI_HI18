@@ -1,63 +1,197 @@
-.teach-container {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    /* Ensure the container takes full height */
-}
+    .teach-container {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        /* Ensure the container takes full height */
+    }
 
-.side-bar {
-    width: 250px;
-    /* Set a fixed width for the sidebar */
-    background-color: #333;
-    /* Example background color */
-    color: #fff;
-    /* Example text color */
-}
+    .side-bar {
+        width: 250px;
+        /* Set a fixed width for the sidebar */
+        background-color: #333;
+        /* Example background color */
+        color: #fff;
+        /* Example text color */
+    }
 
-.main-content {
-    flex-grow: 1;
-    /* Allow main content to take up remaining space */
-    display: flex;
-    flex-direction: column;
-}
+    .main-content {
+        flex-grow: 1;
+        /* Allow main content to take up remaining space */
+        display: flex;
+        flex-direction: column;
+    }
 
-header {
-    width: 100%;
-    /* Ensure header takes full width */
-    background-color: #f9f9f9;
-    /* Example background color */
-}
+    header {
+        width: 100%;
+        /* Ensure header takes full width */
+        background-color: #f9f9f9;
+        /* Example background color */
+    }
 
-.overview-heading {
-    margin: 10px 0;
-}
+    .overview-heading {
+        margin: 10px 0;
+    }
 
-.notification-bar-wrapper {
-    margin-top: 0px;
-}
+    .notification-bar-wrapper {
+        margin-top: 0px;
+    }
 
-.graph-wrapper {
-    margin-top: 20px;
-}
+    .graph-wrapper {
+        margin-top: 20px;
+    }
 
-.task-container {
-    display: flex;
-    gap: 20px;
-    /* Space between TaskList and TaskDiagram */
-}
+    .task-container {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        /* Space between TaskList and TaskDiagram */
+    }
 
-.task-list {
-    flex: 1;
-    margin-left: 0;
-    padding-left: 0;
-}
+    .task-list {
+        flex: 1;
+        margin-left: 0;
+        padding-left: 0;
+    }
 
-.task-diagram {
-    flex: 2;
-    margin-left: 0;
-    padding-left: 0;
-}
+    .task-diagram {
+        flex: 2;
+        margin-left: 0;
+        padding-left: 0;
+    }
 
-.teach-kpi {
-    margin-bottom: 50px;
-}
+    .teach-kpi {
+        margin-bottom: 50px;
+    }
+
+    @media  screen and (max-width: 440px) {
+        .teach-container {
+            height: auto;
+        }
+
+        .side-bar {
+            width: 100%;
+        }
+
+        .main-content {
+            flex-grow: 1;
+        }
+
+        .task-container {
+            width: 400px !important;
+            flex-direction: column !important;
+            gap: 10px;
+            padding: 0 10px;
+            display: block;
+            /* Ensure task-container is block */
+        }
+
+        .task-list {
+            flex: none;
+            width: 100%;
+            margin-left: -20px;
+            padding-left: 0;
+        }
+
+        .task-diagram {
+            flex: none;
+            width: 100%;
+            margin-left: -20px;
+            padding-left: 0;
+        }
+
+        .teach-kpi {
+            margin-bottom: 20px;
+        }
+
+        /* TeachKpi.css */
+        .kpi-schedule-container {
+            flex-direction: column;
+            gap: 20px;
+            padding: 0 10px;
+            margin-left: -10px;
+        }
+
+        .bi-u-d-b-o-ti-n-t-ng-kpi {
+            width: 100%;
+            margin-top: 20px;
+            margin-left: 0;
+            padding: 10px;
+        }
+
+        .frame-1243,
+        .frame-1247,
+        .frame-1245,
+        .frame-1111,
+        .frame-1110,
+        .frame-11112,
+        .frame-1112,
+        .frame-1113,
+        .frame-1114,
+        .frame-1115 {
+            width: 100%;
+        }
+
+        /* TaskList.css */
+        .content {
+            width: 100%;
+            margin: auto;
+            padding: 16px 10px;
+        }
+
+        .menu-tab {
+            gap: 10px;
+            flex-direction: column;
+        }
+
+        .tab {
+            width: 100%;
+            text-align: center;
+        }
+
+        .item-list {
+            width: 100%;
+        }
+
+        /* TaskDiagram.css */
+        .statistics-details {
+            width: 100%;
+            padding: 16px 10px 40px;
+        }
+
+        .header {
+            width: 100%;
+        }
+
+        .frame-40384 {
+            width: 100%;
+        }
+
+        .graph {
+            width: 100%;
+        }
+
+        .bar {
+            width: 100%;
+        }
+
+        /* SpecialTime.css */
+        .time-container {
+            width: 100%;
+            padding: 20px 10px;
+            margin-top: 20px;
+        }
+
+        .grid {
+            grid-template-columns: 1fr;
+        }
+
+        .chart-container {
+            width: 100%;
+            padding: 0;
+        }
+
+        .chart {
+            width: 100%;
+            height: auto;
+        }
+    }

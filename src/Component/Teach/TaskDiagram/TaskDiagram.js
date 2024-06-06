@@ -1,88 +1,107 @@
-import React from "react";
+import React, { useState } from "react";
+import { Bar } from "react-chartjs-2";
 import "./TaskDiagram.css";
+
 const TaskDiagram = () => {
+  const [timePeriod, setTimePeriod] = useState("week");
+
+  const data = {
+    week: {
+      labels: ["18 Mon", "19 Tue", "20 Wed", "21 Thu"],
+      datasets: [
+        {
+          label: "Tuần này",
+          backgroundColor: "#FF698D",
+          data: [6, 4, 7, 6],
+        },
+        {
+          label: "Tuần trước",
+          backgroundColor: "#E8E8E8",
+          data: [5, 6, 4, 5],
+        },
+      ],
+    },
+    month: {
+      labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
+      datasets: [
+        {
+          label: "Tháng này",
+          backgroundColor: "#FF698D",
+          data: [20, 25, 30, 35],
+        },
+        {
+          label: "Tháng trước",
+          backgroundColor: "#E8E8E8",
+          data: [18, 24, 28, 32],
+        },
+      ],
+    },
+    year: {
+      labels: [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ],
+      datasets: [
+        {
+          label: "Năm nay",
+          backgroundColor: "#FF698D",
+          data: [200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750],
+        },
+        {
+          label: "Năm trước",
+          backgroundColor: "#E8E8E8",
+          data: [180, 240, 280, 320, 360, 400, 440, 480, 520, 560, 600, 640],
+        },
+      ],
+    },
+  };
+
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      x: {
+        beginAtZero: true,
+      },
+      y: {
+        beginAtZero: true,
+        max: timePeriod === "week" ? 8 : timePeriod === "month" ? 40 : 800,
+      },
+    },
+  };
+
   return (
-    <div class="statistics-details">
-      <div class="header">
-        <div class="frame-40384">
+    <div className="statistics-details">
+      <div className="header">
+        <div className="frame-40384">
           <div className="s-gi-gi-ng-d-y-trong-tu-n">Số giờ giảng dạy</div>
-          <select className="time-selector">
+          <select
+            className="time-selector"
+            value={timePeriod}
+            onChange={(e) => setTimePeriod(e.target.value)}
+          >
             <option value="week">Tuần</option>
             <option value="month">Tháng</option>
             <option value="year">Năm</option>
           </select>
         </div>
-        <div class="indicator">
-          <div class="this-week">
-            <div class="rectangle-69"></div>
-            <div class="tu-n-n-y">Tuần này</div>
-          </div>
-          <div class="last-week">
-            <div class="rectangle-692"></div>
-            <div class="tu-n-tr-c">Tuần trước</div>
-          </div>
-        </div>
-        <div class="indicator2"></div>
+        <div className="indicator2"></div>
       </div>
-      <div class="graph">
-        <div class="line">
-          <div class="_8">8</div>
-          <div class="line-7"></div>
-        </div>
-        <div class="line">
-          <div class="_6">6</div>
-          <div class="line-8"></div>
-        </div>
-        <div class="line">
-          <div class="_4">4</div>
-          <div class="line-9"></div>
-        </div>
-        <div class="line">
-          <div class="_2">2</div>
-          <div class="line-10"></div>
-        </div>
-        <div class="line">
-          <div class="_0">0</div>
-          <div class="line-11"></div>
-        </div>
-        <div class="bar">
-          <div class="bar2">
-            <div class="bar3">
-              <div class="rectangle-53"></div>
-              <div class="rectangle-54"></div>
-            </div>
-            <div class="_17-sun">18 Mon</div>
-          </div>
-          <div class="bar4">
-            <div class="bar3">
-              <div class="rectangle-532"></div>
-              <div class="rectangle-542"></div>
-            </div>
-            <div class="_17-sun">19 Tue</div>
-          </div>
-          <div class="bar5">
-            <div class="bar3">
-              <div class="rectangle-532"></div>
-              <div class="rectangle-543"></div>
-            </div>
-            <div class="_17-sun">20 Wed</div>
-          </div>
-          <div class="bar6">
-            <div class="bar3">
-              <div class="rectangle-533"></div>
-              <div class="rectangle-544"></div>
-            </div>
-            <div class="_17-sun">21 Thu</div>
-          </div>
-          <div class="bar7">
-            <div class="bar8">
-              <div class="rectangle-534"></div>
-            </div>
-            <div class="_17-sun">22 Fri</div>
-          </div>
-        </div>
+      <div className="graph">
+        <Bar data={data[timePeriod]} options={options} />
       </div>
     </div>
   );
 };
+
 export default TaskDiagram;
