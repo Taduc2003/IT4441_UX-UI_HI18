@@ -6,6 +6,7 @@
   background-color: #f8f9fa;
   border-bottom: 1px solid #dee2e6;
   transition: filter 0.3s;
+  /* position: fixed; */
 }
 
 .blurred {
@@ -163,7 +164,7 @@
   display: block;
   position: absolute;
   width: 120px;
-  top: calc(100% + 5px);
+  top: calc(100% + 20px);
   right: 0;
   background-color: #fff;
   border: 1px solid #ced4da;
@@ -222,7 +223,7 @@
 
 @media (max-width: 768px) {
   .taskbar {
-    width: 400px;
+    width: 420px;
     float: left;
   }
 }

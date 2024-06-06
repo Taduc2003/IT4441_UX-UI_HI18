@@ -38,14 +38,15 @@ const Admin = () => {
       typee : 'nghiên cứu',
     }
 
-    const researchDetail = {
-      typee : 'bài báo nghiên cứu',
-      semester: '2023.1',
-      name1: 'Ảnh hưởng của hằng số thời gian T của mạch điều chỉnh đến độ chính xác gia công trên máy CNC',
-      status1: 'Chưa công bố',
-      name2: 'Phương pháp tính toán, thiết kế bộ truyền bánh răng –thanh răng',
-      status2: 'Đã công bố',
-    }
+  const researchDetail = {
+    typee: "bài báo nghiên cứu",
+    semester: "2023.1",
+    name1:
+      "Ảnh hưởng của hằng số thời gian T của mạch điều chỉnh đến độ chính xác gia công trên máy CNC",
+    status1: "Chưa công bố",
+    name2: "Phương pháp tính toán, thiết kế bộ truyền bánh răng –thanh răng",
+    status2: "Đã công bố",
+  };
   return (
     <div className="overview-container-research">
       <Sidebar />
@@ -58,8 +59,7 @@ const Admin = () => {
           <DetailGoal data = {researchDetail}/>
         {uploadVisible && <UploadFileOrImg onClose={toggleUpload} />}
       </div>
-    </div>
-    
+    </div>  
   );
 };
 export default Admin;

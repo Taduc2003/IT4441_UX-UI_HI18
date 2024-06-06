@@ -1,6 +1,6 @@
     .teach-container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         height: 100vh;
         /* Ensure the container takes full height */
     }
@@ -15,10 +15,10 @@
     }
 
     .main-content {
-        flex-grow: 1;
+        width: 100%;;
         /* Allow main content to take up remaining space */
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
     }
 
     header {
@@ -28,7 +28,12 @@
         /* Example background color */
     }
 
-    .overview-heading {
+    .main-content .teach-content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .teach-heading {
         margin: 10px 0;
     }
 

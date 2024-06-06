@@ -11,19 +11,25 @@ import SpecialTime from "./SpecialTime/SpecialTime.js";
 const Teach = () => {
   return (
     <div className="teach-container">
-      <Sidebar />
-      <div className="main-content">
+      <div className="header-wrapper">
         <Header />
-        <div className="teach-kpi">
-          <TeachKpi />
-        </div>
-        <div className="task-container">
-          <div className="task-list">
-            <TaskList />
+      </div>
+
+      <div className="main-content">
+        <Sidebar />
+        <div className="teach-content">
+          <h1 className="teach-heading">Giảng dạy</h1>
+          <div className="teach-kpi">
+            <TeachKpi />
           </div>
-          <div className="task-diagram">
-            <TaskDiagram />
-            <SpecialTime />
+          <div className="task-container">
+            <div className="task-list">
+              <TaskList />
+            </div>
+            <div className="task-diagram">
+              <TaskDiagram />
+              <SpecialTime />
+            </div>
           </div>
         </div>
       </div>

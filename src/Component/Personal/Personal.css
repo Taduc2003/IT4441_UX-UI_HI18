@@ -1,6 +1,6 @@
 .admin-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 100vh; /* Ensure the container takes full height */
 }
 
@@ -11,9 +11,18 @@
 }
 
 .main-content {
-  flex-grow: 1; /* Allow main content to take up remaining space */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* padding: 10px; */
+}
+
+.profile {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
 }
 
@@ -21,7 +30,7 @@
   position: relative;
   padding: 10px;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   height: 40%; /* Adjust height as needed */
   /* border-bottom: 1px solid rgb(246, 219, 219); */
@@ -36,7 +45,7 @@
 }
 
 .avatar-container {
-  position: absolute;
+  /* position: absolute; */
   top: 10%;
   display: flex;
   flex-direction: column;
@@ -110,26 +119,32 @@
 
 
 .profile-details {
-  margin: 10%;
+  /* margin: 10%; */
+  top: 20%;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .detailed-info {
+  /* margin: 50px; */
+  margin-top: 80px;
   font-size: 16px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width:300px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   /* align-items: center; */
 }
 
 .basic-info {
+  /* margin: 50px; */
+  margin-top: 80px;
   border-radius: 10px;
   padding: 20px;
-  width: 300px;
+  width: 400px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;

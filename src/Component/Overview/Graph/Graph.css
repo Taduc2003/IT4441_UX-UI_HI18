@@ -72,17 +72,17 @@ body {
   color: #777;
 }
 
-.teach-content {
+/* .teach-content {
   background: linear-gradient(to right, #ffffff, #FF9C9C);
-}
+} */
 
-.research-content {
+/* .research-content {
   background: linear-gradient(to right, #ffffff, #01BCF4);
 }
 
 .serve-content {
   background: linear-gradient(to right, #ffffff, #FFC042);
-}
+} */
 
 @media (max-width: 768px) {
   .graphs-container {
@@ -102,21 +102,21 @@ body {
 
   .teach-box {
     flex: 0 0 100%;
-    width: 120%;
+    width: 125%;
     margin-top: 15%;
     margin-left: 20%;
   }
 
   .research-box {
     flex: 0 0 100%;
-    width: 100%;
+    width: 110%;
     margin-top: 15%;
     margin-left: 18%;
   }
 
   .serve-box {
     flex: 0 0 100%;
-    width: 125%;
+    width: 130%;
     margin-top: 15%;
     margin-left: 30%;
   }
