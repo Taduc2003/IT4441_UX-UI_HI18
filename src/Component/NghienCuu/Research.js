@@ -1,13 +1,19 @@
+import React, { useState } from "react";
 import Sidebar from "../Sidebar";
 import "./Research.css";
 
-import Goals from "./Goals/Goals";
 import ChartComponent from "./ColumnChart/ChartComponet";
 import DetailGoal from "./detailGoal2/DetailGoal";
 import Header from "../header/Header";
 import UploadFileOrImg from "./uploadFile/UploadFileOrImg";
+import GoalBar from "./Goals/GoalBar";
+import TaskList from "./TastListRerearch/TaskListResearch";
 
 const Admin = () => {
+    const [uploadVisible, setUploadVisible] = useState(false);
+    const toggleUpload = () => {
+      setUploadVisible(!uploadVisible);
+    };
   const data1 = {
     goal: "Mục tiêu mức 1",
     title: "Số giờ cần nghiên cứu trong kỳ",
@@ -53,22 +59,20 @@ const Admin = () => {
         <div className="research-content">
           <h1 className="research-heading">Nghiên cứu</h1>
           <div className="research-graph">
-            <div className="ngang">
-              <Goals data={data1} />
-              <ChartComponent data={researchChart} />
-            </div>
-            <div className="ngang">
-              <Goals data={data2} />
-              <DetailGoal data={researchDetail} />
-            </div>
-            <div className="ngang">
-              <Goals data={data3} />
-              <UploadFileOrImg />
+              <button className="upload-research-button" onClick={toggleUpload}>Tải minh chứng</button>
+              <GoalBar data1={data1} data2={data2} data3={data3} />
+              <div className="research-ngang">
+                <div className="research-doc">
+                  <ChartComponent data = {researchChart}/>
+                  <DetailGoal data = {researchDetail}/>
+                </div>
+              <TaskList/>
+              </div>
+              {uploadVisible && <UploadFileOrImg onClose={toggleUpload} />}
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+  )
 };
 export default Admin;
