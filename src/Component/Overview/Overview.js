@@ -7,22 +7,26 @@ import Schedule from "./Schedule/Schedule";
 const Admin = () => {
   return (
     <div className="admin-container">
-      <Sidebar />
+      <div className="header-wrapper">
+        <Header />
+      </div>
 
       <div className="main-content">
-        <Header />
-        <h1 className="overview-heading">Tổng quan</h1>
+        <Sidebar />
+        <div className="overview-content">
+          <h1 className="overview-heading">Tổng quan</h1>
 
-        <div className="notification-bar-wrapper">
-          <NotificationBar />
-        </div>
+          <div className="notification-bar-wrapper">
+            <NotificationBar />
+          </div>
 
-        <div className="graph-wrapper">
-          <Graph />
-        </div>
+          <div className="graph-wrapper">
+            <Graph />
+          </div>
 
-        <div className="calendar">
-          <Schedule />
+          <div className="calendar">
+            <Schedule />
+          </div>
         </div>
       </div>
     </div>
