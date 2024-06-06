@@ -1,7 +1,8 @@
+import React, {useState} from "react";
 import Sidebar from "../Sidebar";
 import "./Service.css";
 
-import Goals from "../NghienCuu/Goals/Goals";
+import GoalBar from "../NghienCuu/Goals/GoalBar";
 import ChartComponent from "../NghienCuu/ColumnChart/ChartComponet";
 import DetailGoal from "../NghienCuu/detailGoal2/DetailGoal";
 import Header from "../header/Header";
@@ -24,7 +25,7 @@ const Admin = () => {
     };
     const data3 = {
         goal: 'Mục tiêu mức 3',
-        title: 'Số hoạt động phục vụ tham gia với vai trò ban tổ chức trong kỳ',
+        title: 'Số lần tham gia ban tổ chức của hoạt động trong kỳ',
         hocki: 'Kỳ  2023.1',
         realAverage: 0,
         needAverage: 2,
@@ -38,30 +39,32 @@ const Admin = () => {
         semester: '2023.1',
         name1: 'Hoạt động tình nghiện vì trẻ em nghèo ',
         status1: 'Đã hoàn thành',
-        name2: 'Talk-show: "Thất bại là thử thách"',
+        name2: 'Talk-show: "Thất bại là thử thách" ',
         status2: 'Chưa hoàn thành',
       }
-
+      const [uploadVisible, setUploadVisible] = useState(false);
+      const toggleUpload = () => {
+        setUploadVisible(!uploadVisible);
+      };
   return (
-    <div className="overview-container">
-      <Sidebar />
-      <div className ="content-doc">
-      <Header />
-      <div className="titles">Phục vụ</div>
-        <div className="ngang">
-        <Goals data ={data1}/> 
+    <div className="admin-container">
+      <div className="header-wrapper">
+        <Header />
+      </div>
+      <div className="main-content">
+        <Sidebar />
+        <div className="service-content">
+          <h1 className="service-heading">Phục vụ</h1>
+          <div className="service-graph">
+        <button className="upload-service-button" onClick={toggleUpload}>Tải minh chứng</button>
+        <GoalBar data1={data1} data2={data2} data3={data3} />
         <ChartComponent data = {serviceChart}/>
-        </div>
-        <div className="ngang">
-        <Goals data ={data2}/> 
         <DetailGoal data = {serviceDetail}/>
-        </div>
-        <div className="ngang">
-        <Goals data ={data3}/> 
-        <UploadFileOrImg/>
-        </div>
+      {uploadVisible && <UploadFileOrImg onClose={toggleUpload} />}
       </div>
     </div>
+    </div>
+  </div>
   );
 };
 export default Admin;
