@@ -134,8 +134,10 @@
     background: #ff4a6e;
 }
 
-.sidebar.closed .toggle-button {
-    margin-left: 33px;
+@media (min-width: 768px) {
+    .toggle-button {
+        display: none;
+    }
 }
 
 /* CSS Responsive cho sidebar */

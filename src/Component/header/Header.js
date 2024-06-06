@@ -69,11 +69,11 @@ const Header = () => {
   return (
     <div>
       <div className={`taskbar ${selectedNotification ? "blurred" : ""}`}>
-        <div className="search-bar">
+        {/* <div className="search-bar">
           <CiSearch />
           <input type="text" placeholder="Search..." />
           <MdOutlineKeyboardVoice />
-        </div>
+        </div> */}
         <div className="notification-icon" onClick={toggleNotifications}>
           <IoMdNotificationsOutline />
           {showNotifications && (

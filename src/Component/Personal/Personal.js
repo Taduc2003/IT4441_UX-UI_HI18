@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "../Sidebar";
+import { toast } from "react-toastify";
 import "./Personal.css";
 import Header from "../header/Header";
 import { MdMailOutline, MdPhone } from "react-icons/md";
@@ -31,6 +32,10 @@ const Personal = () => {
   // const handleDateChange = (name, date) => {
   //   setProfile({ ...profile, [name]: date });
   // };
+
+  const notify = () => {
+    toast.success("Thay đổi thành công!");
+  }
 
   const [showBasicModal, setShowBasicModal] = useState(true);
 
@@ -144,7 +149,7 @@ const Personal = () => {
                 <div className="button-group">
                   <div
                     className="change-basic-info-button"
-                    onClick={toggleDetailModal}
+                    onClick={() => { toggleDetailModal(); notify(); }}
                   >
                     Lưu
                   </div>
@@ -206,7 +211,7 @@ const Personal = () => {
                 <div className="button-group">
                   <div
                     className="change-basic-info-button"
-                    onClick={toggleBasicModal}
+                    onClick={() => { toggleBasicModal(); notify(); }}
                   >
                     Lưu
                   </div>
