@@ -28,8 +28,9 @@ const MyComponent = () => {
                 <a href="#">About Me</a>
               </li>
               <li className="logo">
-                <h1>HusTracking</h1>
-                <p>Best tracking website</p>
+                <div className="logo-pic">
+                  
+                </div>
               </li>
               <li>
                 <a href="#">Blog</a>

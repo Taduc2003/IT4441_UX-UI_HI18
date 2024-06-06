@@ -104,20 +104,23 @@ body {
     flex: 0 0 100%;
     width: 125%;
     margin-top: 15%;
-    margin-left: 20%;
+    margin-left: 8%;
+    padding: 15px;
   }
 
   .research-box {
     flex: 0 0 100%;
     width: 110%;
     margin-top: 15%;
-    margin-left: 18%;
+    margin-left: 5%;
+    padding: 15px;
   }
 
   .serve-box {
     flex: 0 0 100%;
     width: 130%;
     margin-top: 15%;
-    margin-left: 30%;
+    margin-left: 15%;
+    padding: 15px;
   }
 }

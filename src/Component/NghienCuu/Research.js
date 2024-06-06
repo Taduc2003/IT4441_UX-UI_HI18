@@ -10,10 +10,10 @@ import GoalBar from "./Goals/GoalBar";
 import TaskList from "./TastListRerearch/TaskListResearch";
 
 const Admin = () => {
-    const [uploadVisible, setUploadVisible] = useState(false);
-    const toggleUpload = () => {
-      setUploadVisible(!uploadVisible);
-    };
+  const [uploadVisible, setUploadVisible] = useState(false);
+  const toggleUpload = () => {
+    setUploadVisible(!uploadVisible);
+  };
   const data1 = {
     goal: "Mục tiêu mức 1",
     title: "Số giờ cần nghiên cứu trong kỳ",
@@ -59,20 +59,22 @@ const Admin = () => {
         <div className="research-content">
           <h1 className="research-heading">Nghiên cứu</h1>
           <div className="research-graph">
-              <button className="upload-research-button" onClick={toggleUpload}>Tải minh chứng</button>
-              <GoalBar data1={data1} data2={data2} data3={data3} />
-              <div className="research-ngang">
-                <div className="research-doc">
-                  <ChartComponent data = {researchChart}/>
-                  <DetailGoal data = {researchDetail}/>
-                </div>
-              <TaskList/>
+            <button className="upload-research-button" onClick={toggleUpload}>
+              Tải minh chứng
+            </button>
+            <GoalBar data1={data1} data2={data2} data3={data3} />
+            <div className="research-ngang">
+              <div className="research-doc">
+                <ChartComponent data={researchChart} />
+                <DetailGoal data={researchDetail} />
               </div>
-              {uploadVisible && <UploadFileOrImg onClose={toggleUpload} />}
+              <TaskList />
             </div>
+            {uploadVisible && <UploadFileOrImg onClose={toggleUpload} />}
           </div>
         </div>
       </div>
-  )
+    </div>
+  );
 };
 export default Admin;
