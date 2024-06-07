@@ -90,7 +90,7 @@ const CreateKPI = () => {
           <Form.Group className="createKPIFormGroup">
             <Form.Label>KỲ HỌC: 20232</Form.Label>
           </Form.Group>
-          <Form.Group className="createKPIFormGroup text-center">
+          <Form.Group className="createKPIFormGroup ">
             {" "}
             {/* Căn giữa Row */}
             <Form.Label>MỤC TIÊU MUỐN ĐẠT ĐƯỢC:</Form.Label>

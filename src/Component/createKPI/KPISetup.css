@@ -1,120 +1,297 @@
 /* KPISetup.css */
+
+/* Container chính cho toàn bộ bước KPI */
 .kpi-step {
-    width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Thanh chỉ thị các bước */
+.step-indicator {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.step-indicator span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: white;
+  font-weight: bold;
+}
+
+.step-indicator span.active .step-number {
+  background-color: #ff698d;
+}
+
+.step-text {
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+/* Tiêu đề của từng phần KPI */
+h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Phần chứa thông tin của mỗi mục tiêu */
+.kpi-section {
+  margin-bottom: 20px;
+}
+
+details {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+summary {
+  padding: 10px 15px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.goal-info {
+  font-size: 0.8em;
+  color: #6c757d;
+  margin-left: 10px;
+}
+
+/* Danh sách nhiệm vụ */
+.task-list {
+  padding: 10px;
+}
+
+.add-task {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.add-task-btn {
+  background-color: #ff698d;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Mỗi mục nhiệm vụ */
+.task-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.task-item > * {
+  margin-right: 5px;
+}
+
+.task-item > *:last-child {
+  margin-right: 0;
+}
+
+.task-name {
+  order: 1;
+  text-align: left;
+  flex: 1;
+}
+
+.task-details {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 0.8em;
+  margin-right: 10px;
+  flex: 2;
+}
+
+.task-time {
+  margin-bottom: 5px;
+}
+
+.task-duration {
+  order: 3;
+  flex: 1;
+}
+
+.task-weight {
+  order: 4;
+  flex: 1;
+}
+
+.task-name,
+.task-details,
+.task-duration,
+.task-weight {
+  margin-left: 0;
+}
+
+.task-name,
+.task-duration,
+.task-weight {
+  display: flex;
+  align-items: center;
+}
+.task-actions {
+  order: 5;
+}
+.btn-edit {
+  background-color: #ff698d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.btn-delete {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.btn-save,
+.btn-nope {
+  order: 7;
+  background-color: #ff698d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.button-group button {
+  background-color: #ff698d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Điều chỉnh cho kích thước màn hình 430x932 */
+@media only screen and (max-width: 430px) and (max-height: 932px) {
+  .kpi-step {
+    width: 100%;
+    padding: 10px;
+    margin: 10px auto;
   }
-  
+
   .step-indicator {
-    display: flex;
-    justify-content: center; /* Căn giữa các bước */
-    margin-bottom: 20px;
+    flex-direction: row;
+    justify-content: space-between;
   }
-  
+
   .step-indicator span {
-    display: flex; 
-    align-items: center;
-    width: auto;
-    margin: 0 10px;
-    padding: 0 50px;  /* Khoảng cách giữa các bước */
+    margin-bottom: 0;
   }
-  
+
   .step-number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #ccc;
-    color: white;
-    font-weight: bold;
-    margin-right: 5px;
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
   }
-  
-  .step-indicator span.active .step-number {
-    background-color: #ff698d;
+
+  .step-text {
+    font-size: 0.8em;
   }
-  h2 {
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .kpi-section {
-    margin-bottom: 15px;
-  }
-  
-  details {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  summary {
-    padding: 10px;
-    background-color: #f0f0f0;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .goal-info {
-    float: right;
-  }
-  
-  .task-list {
-    padding: 10px;
-  }
-  
-  .add-task {
-    text-align: right;
-    margin-bottom: 10px;
-  }
-  
-  .add-task-btn {
-    background-color: #ff698d;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
+
   .task-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    flex-direction: column;
+    align-items: stretch;
   }
-  
-  .task-name {
-    flex-grow: 1;
+
+  .task-item > * {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  .task-item > *:last-child {
+    margin-bottom: 0;
+    
+  }
+/* Các phần tử bên trái */
+.task-name, 
+.task-details, 
+.task-duration, 
+.task-weight {
+  width: 100%;            /* Chiếm toàn bộ chiều rộng của container cha */
+}
+
+/* Bố cục cho nút Sửa và Xóa */
+.task-actions {  
+  display: flex;           /* Kích hoạt Flexbox cho các nút */
+  gap: 5px;              /* Khoảng cách giữa hai nút */
+  width: 100%;
+}
+
+.btn-edit, 
+.btn-delete {
+  flex: 1;                /* Chia đều không gian cho hai nút */
+}
+  .btn-edit,
+  .btn-delete {
+    margin-left: 0;
+    margin-bottom: 5px;
+    width: 48%;
+  }
+
+  .add-task {
+    text-align: center;
+  }
+
+  .button-group {
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .button-group button {
+    margin-left: 0;
+    margin-bottom: 10px;
+    width: auto;
+    flex: 1;
+  }
+
+  .button-group button:first-child {
     margin-right: 10px;
   }
-  
-  .task-details {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .task-duration,
-  .task-weight {
-    margin-left: 10px;
-  }
-  
-  .button-group {
-    text-align: right; /* Căn phải */
-  }
-  
-  .button-group button {
-    background-color: #ff698d;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 10px; /* Khoảng cách giữa các nút */
-  }
-  
+}
