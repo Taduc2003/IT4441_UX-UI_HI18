@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import Sidebar from "../Sidebar";
 import { useDropzone } from "react-dropzone";
 import { useCallback } from "react"; // Thêm useCallback
+import Header from "../header/Header";
 
 const CreateKPI = () => {
   const navigate = useNavigate();
@@ -66,157 +67,163 @@ const CreateKPI = () => {
 
   return (
     <div className="kpi-step1">
-      <Sidebar />
-      <div className="createKPIContainer">
-        <div className="step-indicator">
-          <span className="active">
-            <div className="step-number">1</div>
-            <div className="step-text">Mục tiêu</div>
-          </span>
-          <span>
-            <div className="step-number">2</div>
-            <div className="step-text">Thiết lập KPI</div>
-          </span>
-          <span>
-            <div className="step-number">3</div>
-            <div className="step-text">Hoàn Thành</div>
-          </span>
-        </div>
+      <div className="header-wrapper">
+        <Header />
+      </div>
 
-        <Form>
-          <Form.Group className="createKPIFormGroup">
-            <Form.Label>GIẢNG VIÊN: ĐỖ QUỐC BẢO</Form.Label>
-          </Form.Group>
-          <Form.Group className="createKPIFormGroup">
-            <Form.Label>KỲ HỌC: 20232</Form.Label>
-          </Form.Group>
-          <Form.Group className="createKPIFormGroup ">
-            {" "}
-            {/* Căn giữa Row */}
-            <Form.Label>MỤC TIÊU MUỐN ĐẠT ĐƯỢC:</Form.Label>
-            <Row className="justify-content-center">
+      <div className="createKPIContainer">
+        <Sidebar />
+        <div className="createKPI-content">
+          <div className="step-indicator">
+            <span className="active">
+              <div className="step-number">1</div>
+              <div className="step-text">Mục tiêu</div>
+            </span>
+            <span>
+              <div className="step-number">2</div>
+              <div className="step-text">Thiết lập KPI</div>
+            </span>
+            <span>
+              <div className="step-number">3</div>
+              <div className="step-text">Hoàn Thành</div>
+            </span>
+          </div>
+
+          <Form>
+            <Form.Group className="createKPIFormGroup">
+              <Form.Label>GIẢNG VIÊN: ĐỖ QUỐC BẢO</Form.Label>
+            </Form.Group>
+            <Form.Group className="createKPIFormGroup">
+              <Form.Label>KỲ HỌC: 20232</Form.Label>
+            </Form.Group>
+            <Form.Group className="createKPIFormGroup ">
               {" "}
-              {/* Căn giữa các nút trong Row */}
-              <Col xs="auto">
-                <Button
-                  id="xuat-sac"
-                  value="xuat-sac"
-                  className={`createKPIButton goal ${
-                    goal === "xuat-sac" ? "active" : ""
-                  }`}
-                  onClick={() => handleGoalChange("xuat-sac")}
-                >
-                  Xuất sắc
-                </Button>
-              </Col>
-              <Col xs="auto">
-                <Button
-                  id="gioi"
-                  value="gioi"
-                  className={`createKPIButton goal ${
-                    goal === "gioi" ? "active" : ""
-                  }`}
-                  onClick={() => handleGoalChange("gioi")}
-                >
-                  Giỏi
-                </Button>
-              </Col>
-              <Col xs="auto">
-                <Button
-                  id="kha"
-                  value="kha"
-                  className={`createKPIButton goal ${
-                    goal === "kha" ? "active" : ""
-                  }`}
-                  onClick={() => handleGoalChange("kha")}
-                >
-                  Khá
-                </Button>
-              </Col>
-            </Row>
-          </Form.Group>
-          <Form.Group className="createKPIFormGroup">
-            <Form.Group className="BigGoal">
-              <Form.Label>GỢI Ý MỤC TIÊU:</Form.Label>
-              <Row>
-                {Object.keys(subGoalsLabels).map((subGoalId) => (
-                  <Col key={subGoalId} xs={12} md={6}>
-                    <Form.Check
-                      type="checkbox"
-                      id={subGoalId}
-                      label={subGoalsLabels[subGoalId]} // Sử dụng subGoalsLabels để lấy label
-                      value={subGoalsLabels[subGoalId]} // Sử dụng subGoalsLabels để lấy label
-                      checked={subGoals.includes(subGoalsLabels[subGoalId])} // Kiểm tra dựa trên label
-                      onChange={handleSubGoalChange}
-                      className="createKPICheckbox"
-                    />
-                  </Col>
-                ))}
-              </Row>
-              <Form.Label>THÊM MỤC TIÊU:</Form.Label>
-              <Row>
-                <Col>
-                  <InputGroup className="mb-3">
-                    <Form.Control
-                      type="text"
-                      placeholder="Nhập nhiệm vụ mới"
-                      value={newSubGoal}
-                      onChange={(e) => setNewSubGoal(e.target.value)}
-                    />
-                    <Button
-                      variant="outline-secondary"
-                      onClick={handleAddSubGoal}
-                    >
-                      Thêm
-                    </Button>
-                  </InputGroup>
+              {/* Căn giữa Row */}
+              <Form.Label>MỤC TIÊU MUỐN ĐẠT ĐƯỢC:</Form.Label>
+              <Row className="justify-content-center">
+                {" "}
+                {/* Căn giữa các nút trong Row */}
+                <Col xs="auto">
+                  <Button
+                    id="xuat-sac"
+                    value="xuat-sac"
+                    className={`createKPIButton goal ${
+                      goal === "xuat-sac" ? "active" : ""
+                    }`}
+                    onClick={() => handleGoalChange("xuat-sac")}
+                  >
+                    Xuất sắc
+                  </Button>
+                </Col>
+                <Col xs="auto">
+                  <Button
+                    id="gioi"
+                    value="gioi"
+                    className={`createKPIButton goal ${
+                      goal === "gioi" ? "active" : ""
+                    }`}
+                    onClick={() => handleGoalChange("gioi")}
+                  >
+                    Giỏi
+                  </Button>
+                </Col>
+                <Col xs="auto">
+                  <Button
+                    id="kha"
+                    value="kha"
+                    className={`createKPIButton goal ${
+                      goal === "kha" ? "active" : ""
+                    }`}
+                    onClick={() => handleGoalChange("kha")}
+                  >
+                    Khá
+                  </Button>
                 </Col>
               </Row>
-              <Form.Label>MỤC TIÊU ĐÃ THIẾT LẬP:</Form.Label>
-              <Row>
-                {subGoals.map((subGoal, index) => (
-                  <Col key={index}>
-                    {" "}
-                    {/* Truyền index làm key cho mỗi Form.Check */}
-                    <Form.Check
-                      type="checkbox"
-                      id={subGoal}
-                      label={subGoal}
-                      value={subGoal}
-                      checked={subGoals.includes(subGoal)}
-                      onChange={handleSubGoalChange}
-                      className="createKPICheckbox"
-                    />
-                  </Col>
-                ))}
-              </Row>
             </Form.Group>
-          </Form.Group>
-          <Form.Group className="createKPIFormGroup">
-            <Form.Label>TẢI LÊN FILE KPI MỤC TIÊU:</Form.Label>
-            <div
-              {...getRootProps()}
-              className={`dropzone ${isDragActive ? "active" : ""}`}
-            >
-              <input {...getInputProps()} />
-              {isDragActive ? (
-                <p>Thả file vào đây ...</p>
-              ) : (
-                <p>Kéo và thả file Excel vào đây, hoặc click để chọn file</p>
-              )}
-              {excelFile && <p>File đã chọn: {excelFile.name}</p>}
-            </div>
-          </Form.Group>
-          <Form.Group className="createKPIFormGroup">
-            <Button
-              variant="primary"
-              onClick={handleSubmit}
-              className="createButton"
-            >
-              TIẾP TỤC
-            </Button>
-          </Form.Group>
-        </Form>
+            <Form.Group className="createKPIFormGroup">
+              <Form.Group className="BigGoal">
+                <Form.Label>GỢI Ý MỤC TIÊU:</Form.Label>
+                <Row>
+                  {Object.keys(subGoalsLabels).map((subGoalId) => (
+                    <Col key={subGoalId} xs={12} md={6}>
+                      <Form.Check
+                        type="checkbox"
+                        id={subGoalId}
+                        label={subGoalsLabels[subGoalId]} // Sử dụng subGoalsLabels để lấy label
+                        value={subGoalsLabels[subGoalId]} // Sử dụng subGoalsLabels để lấy label
+                        checked={subGoals.includes(subGoalsLabels[subGoalId])} // Kiểm tra dựa trên label
+                        onChange={handleSubGoalChange}
+                        className="createKPICheckbox"
+                      />
+                    </Col>
+                  ))}
+                </Row>
+                <Form.Label>THÊM MỤC TIÊU:</Form.Label>
+                <Row>
+                  <Col>
+                    <InputGroup className="mb-3">
+                      <Form.Control
+                        type="text"
+                        placeholder="Nhập nhiệm vụ mới"
+                        value={newSubGoal}
+                        onChange={(e) => setNewSubGoal(e.target.value)}
+                      />
+                      <Button
+                        variant="outline-secondary"
+                        onClick={handleAddSubGoal}
+                      >
+                        Thêm
+                      </Button>
+                    </InputGroup>
+                  </Col>
+                </Row>
+                <Form.Label>MỤC TIÊU ĐÃ THIẾT LẬP:</Form.Label>
+                <Row>
+                  {subGoals.map((subGoal, index) => (
+                    <Col key={index}>
+                      {" "}
+                      {/* Truyền index làm key cho mỗi Form.Check */}
+                      <Form.Check
+                        type="checkbox"
+                        id={subGoal}
+                        label={subGoal}
+                        value={subGoal}
+                        checked={subGoals.includes(subGoal)}
+                        onChange={handleSubGoalChange}
+                        className="createKPICheckbox"
+                      />
+                    </Col>
+                  ))}
+                </Row>
+              </Form.Group>
+            </Form.Group>
+            <Form.Group className="createKPIFormGroup">
+              <Form.Label>TẢI LÊN FILE KPI MỤC TIÊU:</Form.Label>
+              <div
+                {...getRootProps()}
+                className={`dropzone ${isDragActive ? "active" : ""}`}
+              >
+                <input {...getInputProps()} />
+                {isDragActive ? (
+                  <p>Thả file vào đây ...</p>
+                ) : (
+                  <p>Kéo và thả file Excel vào đây, hoặc click để chọn file</p>
+                )}
+                {excelFile && <p>File đã chọn: {excelFile.name}</p>}
+              </div>
+            </Form.Group>
+            <Form.Group className="createKPIFormGroup">
+              <Button
+                variant="primary"
+                onClick={handleSubmit}
+                className="createButton"
+              >
+                TIẾP TỤC
+              </Button>
+            </Form.Group>
+          </Form>
+        </div>
       </div>
     </div>
   );
