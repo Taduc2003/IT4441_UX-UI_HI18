@@ -14,12 +14,12 @@
     align-items: center;
 }
 
-.hus-tracking {
-    color: #ff005c;
-    font-family: "Ubuntu-Bold", sans-serif;
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 24px;
+.login-logo {
+    background-image: url('../../img/logo2.png');
+    background-size: contain;
+    /* background-color: #ff005c; */
+    width: 200px;
+    height: 200px;
 }
 
 .title {
@@ -122,6 +122,23 @@
     cursor: pointer;
     width: 100%;
     text-align: center;
+}
+
+.google-logo {
+    background-image: url('../../img/google.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1000;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.button-secondary p {
+    justify-self: center;
+    margin: 0;
+
 }
 
 .google {

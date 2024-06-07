@@ -10,6 +10,16 @@
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.setup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  width: 100%;
 }
 
 /* Thanh chỉ thị các bước */
@@ -63,6 +73,9 @@ details {
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 summary {
@@ -81,6 +94,9 @@ summary {
 /* Danh sách nhiệm vụ */
 .task-list {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .add-task {
@@ -104,6 +120,7 @@ summary {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 10px;
+  margin-left: 20px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;

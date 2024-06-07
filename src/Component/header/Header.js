@@ -129,7 +129,7 @@ const Header = () => {
           <div className="overlay" onClick={closeNotificationModal}></div>
           <div className="notification-modal">
             <div className="notification-modal-content">
-              <span className="close-button" onClick={closeNotificationModal}>
+              <span className="closed-button" onClick={closeNotificationModal}>
                 x
               </span>
               <h2>{selectedNotification.title}</h2>
