@@ -33,7 +33,7 @@ const Login = () => {
     <div>
       <div className="login">
         <div className="login-container">
-          <div className="hus-tracking">HusTracking</div>
+          <div className="login-logo"></div>
           <div className="input-section">
             <div className="email">
               <label htmlFor="email" className="label">
@@ -86,10 +86,10 @@ const Login = () => {
               <div className="line-10"></div>
               <div className="sign-in-with">hoặc đăng nhập với</div>
             </div>
-            <button className="button-secondary">
-              <img className="google" src="group0.svg" alt="Google icon" />
-              Đăng nhập với google
-            </button>
+            <div className="button-secondary">
+              <div className="google-logo"></div>
+              <p>Đăng nhập với Google</p>
+            </div>
           </div>
           <a href="#" className="create-account" onClick={handleRegister}>
             Tạo tài khoản
