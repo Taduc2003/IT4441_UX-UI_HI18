@@ -1,186 +1,204 @@
 /* CreateKPI.css */
-.createKPIContainer {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
-    font-family: Arial, sans-serif;
-    margin: auto;
-    flex: 1;
-  }
-  
-  .createKPIProgressBar {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .kpi-step1 {
-    display: flex; 
-  }
-  
-  .createKPIStep {
-    flex: 1;
-    text-align: center;
-    padding: 10px;
-    border-bottom: 2px solid #ff698d; /* Màu hồng */
-    color: #ff698d; /* Màu hồng */
-    position: relative;
-  }
-  
-  .createKPIStep::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1px;
-    height: 100%;
-    background-color: #ff698d; /* Màu hồng */
-  }
-  
-  .createKPIStep:last-child::after {
-    display: none;
-  }
-  
-  .createKPICompleted {
-    border-color: #ff698d; /* Màu hồng */
-    color: #ff698d; /* Màu hồng */
-  }
-  
-  .createKPIFormGroup {
-    margin-bottom: 20px;
-  }
-  
-  /* .createKPIFormGroup label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  } */
-  .createKPIFormGroup {
-    display: flex; /* Kích hoạt flexbox */
-    align-items: center; /* Căn giữa theo chiều dọc */
-  }
-  
-  .createKPIFormGroup label {
-    margin-right: 10px; /* Khoảng cách giữa label và ToggleButtonGroup */
-  }
-  .createKPIRadioGroup,
-  .createKPICheckboxGroup {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .createKPIFormGroup label {
-    display: block;
-    margin-bottom: 0px;
-    font-weight: bold;
-    white-space: nowrap; /* Ngăn label bị xuống dòng */
-    
-  }
-  .createKPIRadioGroup input,
-  .createKPICheckboxGroup input {
-    margin-right: 10px;
-  }
-  
-  .createKPIRadioGroup label,
-  .createKPICheckboxGroup label {
-    margin-right: 20px;
-    color: #ff698d; /* Màu hồng */
-  }
-  
-  .createKPICheckbox {
-    margin-bottom: 10px;
-  }
-  
-  .createKPIButton {
-    background-color: #ff698d; /* Màu hồng */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    border-radius: 20px;
-  }
-  
-  .createKPIButton:hover {
-    background-color: #e65479 !important; /* Màu hồng đậm hơn khi hover */
-  }
-  
-  /* ToggleButton */
-  .btn-check:focus + .btn, .btn:focus {
-    outline: 0;
-    box-shadow: none;
-  }
-  
-  .btn-check:checked + .btn, .btn.active {
-    color: white !important;
-    background-color: #ff698d !important; /* Màu hồng */
-    border-color: #ff698d !important; /* Màu hồng */
-  }
-  
-  .btn-check:focus + .btn, .btn:focus {
-    box-shadow: 0 0 0 0.2rem rgba(255, 105, 141, 0.5) !important; /* Màu hồng nhạt khi focus */
-  }
-  
-  .btn-check:checked + .btn:hover, .btn:hover {
-    background-color: #e65479 !important; /* Màu hồng đậm hơn khi hover */
-    border-color: #e65479 !important;
-  }
-  /* Các nút ToggleButton */
-.btn-group > .btn {
-    border-radius: 20px; /* Bo tròn tất cả các góc */
-  }
-  
-  /* Nút ToggleButton đầu tiên */
-  .btn-group > .btn:first-child {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-  }
-  
-  /* Nút ToggleButton cuối cùng */
-  .btn-group > .btn:last-child {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-  .btn-primary {
-    --bs-btn-color: #ff698d; /* Màu hồng */
-    --bs-btn-bg: #ff698d !important; /* Màu trắng */
-    --bs-btn-border-color: #ff698d !important; /* Màu hồng */
-    --bs-btn-hover-color: #fff; /* Màu trắng */
-    --bs-btn-hover-bg: #ff0101; /* Màu hồng đậm hơn */
-    --bs-btn-hover-border-color: #ff0101; /* Màu hồng đậm hơn */
-    --bs-btn-focus-shadow-rgb: 255, 105, 141;
-    --bs-btn-active-color: #fff; /* Màu trắng */
-    --bs-btn-active-bg: #ff0101; /* Màu hồng đậm hơn */
-    --bs-btn-active-border-color: #ff0101; /* Màu hồng đậm hơn */
-    --bs-btn-disabled-color: #fff; /* Màu trắng */
-    --bs-btn-disabled-bg: #ff698d; /* Màu hồng */
-    --bs-btn-disabled-border-color: #ff698d; /* Màu hồng */
+
+/* Kiểu dáng chung */
+.kpi-step1 {
+  display: flex; 
 }
 
-/* ToggleButton đã chọn */
+.createKPIContainer {
+  background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    flex: 1 1;
+    width: 800px;
+    margin: 25px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.createKPIFormGroup {
+  display: flex;
+  flex-direction: column;
+  width: 100%; 
+}
+.createKPIFormGroup .form-label {
+  margin-bottom: 10px;  /* Khoảng cách giữa label và dropzone */
+}
+.createKPIFormGroup .row {
+  display: flex;
+  justify-content: center;
+  width: fit-content; 
+}
+
+.createKPIFormGroup label {
+  margin-right: 10px; 
+}
+
+.BigGoal {
+  display: flex;
+  flex-direction: column;
+}
+
+.createKPICheckboxGroup {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.createKPIFormGroup label {
+  display: block;
+  margin-bottom: 0px;
+  font-weight: bold;
+  white-space: nowrap; 
+}
+
+.createKPICheckboxGroup input {
+  margin-right: 10px;
+}
+
+.createKPICheckboxGroup label {
+  margin-right: 20px;
+  color: #ff698d; 
+  font-size: 18px;
+}
+
+.createKPICheckbox {
+  margin-bottom: 10px;
+}
+
+.form-check-input:checked {
+  background-color: #ff698d !important;
+  border-color: #ff698d !important;
+}
+
+.createButton {
+  background-color: #ff698d; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px; 
+  cursor: pointer;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  transition: background-color 0.3s ease; 
+}
+
+.createKPIButton {
+  background-color: #ff698d; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px; 
+  cursor: pointer;
+  width: 100%;
+  margin: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.createKPIButton.active {
+  background-color: #c30f3c !important; 
+  transform: scale(1.35);     
+}
+
+.createKPIButton {
+  border-radius: 20px !important; 
+}
+
+.btn-primary {
+  --bs-btn-color: #ff698d; 
+  --bs-btn-bg: #ff698d !important; 
+  --bs-btn-border-color: #ff698d !important; 
+  --bs-btn-hover-color: #fff; 
+  --bs-btn-hover-bg: #ff0101; 
+  --bs-btn-hover-border-color: #ff0101; 
+  --bs-btn-focus-shadow-rgb: 255, 105, 141;
+  --bs-btn-active-color: #fff; 
+  --bs-btn-active-bg: #ff0101; 
+  --bs-btn-active-border-color: #ff0101; 
+  --bs-btn-disabled-color: #fff; 
+  --bs-btn-disabled-bg: #ff698d; 
+  --bs-btn-disabled-border-color: #ff698d; 
+}
+
 .btn-check:checked + .btn, .btn.active, .btn:active {
-    color: white !important;
-    background-color: #ff698d !important; /* Màu hồng */
-    border-color: #ff698d !important; /* Màu hồng */
+  color: white !important;
+  background-color: #ff698d !important; 
+  border-color: #ff698d !important; 
+}
+
+.btn-check:checked + .btn:hover, .btn:hover {
+  background-color: #e65479 !important; 
+  border-color: #e65479 !important; 
+}
+
+.dropzone {
+  border: 2px dashed #ccc; 
+  border-radius: 10px;     
+  padding: 20px;           
+  text-align: center;      
+  cursor: pointer;   
+  margin: 20px;     
+}
+
+.dropzone.active {
+  border-color: #007bff; 
+  background-color: #e9ecef; 
+}
+
+.dropzone input[type="file"] {
+  display: none; 
+}
+
+/* Điều chỉnh cho kích thước màn hình 430x932 */
+@media only screen and (max-width: 430px) and (max-height: 932px) {
+  .createKPIContainer {
+      width: 100%; 
+      height: auto; 
+      margin: 10px; 
+      padding: 10px; 
   }
-  
-  /* ToggleButton khi hover */
-  .btn-check:checked + .btn:hover, .btn:hover {
-    background-color: #e65479 !important; /* Màu hồng đậm hơn */
-    border-color: #e65479 !important; /* Màu hồng đậm hơn */
+
+  .createKPIFormGroup {
+      flex-direction: column; 
+      align-items: center; 
   }
-  
-  /* Checkbox đã chọn */
-  :root {
-    --bs-form-check-input-checked-bg: #ff698d !important; /* Màu nền khi được chọn */
-    --bs-form-check-input-checked-border: #ff698d !important; /* Màu viền khi được chọn */
-    --bs-form-check-input-checked-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e"); 
-    /* Đường dẫn icon checkmark màu trắng */
+
+  .createKPIFormGroup .row {
+      width: 100%; 
+      justify-content: space-around; 
   }
-  
-  .custom-checkbox .form-check-input:checked[type="checkbox"] {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3cpath fill='%23ff698d' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e"); /* Thay đổi màu của icon checkmark */
+
+  .createKPICheckboxGroup {
+      justify-content: center; 
   }
+
+  .createKPIButton {
+      width: 100%; 
+      margin: 10px 0; 
+  }
+
+  .step-indicator {
+      flex-direction: row; 
+      justify-content: space-around; 
+      margin-bottom: 20px;
+  }
+
+  .step-indicator span {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 5px; 
+  }
+
+  .step-indicator .step-number {
+      width: 30px; 
+      height: 30px; 
+      font-size: 14px; 
+  }
+
+  .step-indicator .step-text {
+      font-size: 12px;
+  }
+}
