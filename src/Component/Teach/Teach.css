@@ -73,9 +73,9 @@
             height: auto;
         }
 
-        .side-bar {
+        /* .side-bar {
             width: 100%;
-        }
+        } */
 
         .main-content {
             flex-grow: 1;

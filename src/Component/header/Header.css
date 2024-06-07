@@ -7,6 +7,9 @@
   border-bottom: 1px solid #dee2e6;
   transition: filter 0.3s;
   /* position: fixed; */
+  /* position: absolute;
+  z-index: 1000;
+  width: 100%; */
 }
 
 .blurred {
