@@ -7,10 +7,6 @@
     margin: 10px 0;
 }
 
-.content-doc{
-    display: block;
-}
-
 .research-content {
     display: flex;
     flex-direction: column;
@@ -21,15 +17,53 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
 }
 
-.ngang{
+.research-graph .content-ngang{
     display: flex;
-    flex-direction: row; /* Sắp xếp các phần tử theo hàng ngang */
-    justify-content: space-between; /* Khoảng cách đều giữa các phần tử */
-    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
-    gap: 50px; /* Khoảng cách giữa các phần tử, tùy chỉnh theo nhu cầu */
-    margin-top: 20px;
-    margin-bottom: 40px;
+    width: 100%;
+}
+
+.research-graph .content-doc{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.research-graph .task-list {
+    flex: 1;
+    width: 30%;
+}
+
+.upload-research-button {
+    background-color: rgba(255, 99, 104, 0.5);
+    color: white;
+    font-family: "Inter-Bold", sans-serif;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 150px;
+    border: 2px solid rgba(255, 99, 104, 0.5);
+}
+
+.upload-research-button:hover {
+    background-color: rgba(255, 99, 104, 0.5);
+}
+
+@media (max-width: 600px){
+    .research-graph .content-ngang{
+        width: 100% !important;
+        flex-direction: column;
+    }
+
+    .research-graph .content-doc{
+        width: 90%;
+    }
+    
+    .research-graph .task-list {
+        margin-left: 20px;
+        width: 100%;
+    }
 }
