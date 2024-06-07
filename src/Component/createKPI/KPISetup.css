@@ -208,7 +208,6 @@ summary {
   margin-left: 10px;
 }
 
-/* Điều chỉnh cho kích thước màn hình 430x932 */
 @media only screen and (max-width: 431px) {
   .kpi-step {
     width: 100%;
