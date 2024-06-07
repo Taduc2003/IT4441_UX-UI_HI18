@@ -8,7 +8,7 @@ const GaugeChartComponent = ({real,need}) => {
             id="gauge-chart"
             nrOfLevels={6}
             arcsLength={[percent, 1-percent]} // Adjust arc lengths if necessary
-            colors={['#00FF00','#FF5F6D']}
+            colors={['#00FF00','#FF0000']}
             percent={percent}
             arcPadding={0.02}
             textColor="#000000"

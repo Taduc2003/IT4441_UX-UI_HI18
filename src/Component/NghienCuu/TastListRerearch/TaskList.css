@@ -1,0 +1,163 @@
+.content,
+.content * {
+    box-sizing: border-box;
+}
+
+.content {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 16px 24px 34px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    box-shadow: 0px 20px 25px 0px rgba(76, 103, 100, 0.1);
+    max-width: 400px;
+    margin: auto;
+}
+
+.menu-tab {
+    border-bottom: 1px solid #f3f3f3;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+}
+
+.tab {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tab.active {
+    border-bottom: 2px solid #ff698d;
+}
+
+.tab-text {
+    color: #525256;
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.tab.active .tab-text {
+    color: #ff698d;
+}
+
+.item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.item {
+    border-bottom: 1px solid #f3f3f3;
+    padding: 12px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.item-title {
+    color: #191919;
+    text-align: left;
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+.item-date {
+    color: #9f9f9f;
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+.item-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    padding: 8px 12px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.modal-dialog {
+    max-width: 500px;
+    /* Adjust the width as needed */
+    margin: 1.75rem auto;
+    /* Center the modal horizontally */
+}
+
+.modal-content {
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+}
+
+@media screen and (max-width: 500px) {
+    .content {
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 16px 24px 34px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: relative;
+        box-shadow: 0px 20px 25px 0px rgba(76, 103, 100, 0.1);
+        max-width: 350px;
+        margin-left: -10px;
+    }
+}
