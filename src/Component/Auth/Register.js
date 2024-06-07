@@ -22,7 +22,7 @@ const Register = () => {
     <div>
       <div className="login">
         <div className="login-container">
-          <div className="hus-tracking">HusTracking</div>
+          <div className="login-logo"></div>
           <div className="input-section">
             <div className="name">
               <label htmlFor="name" className="label">
@@ -81,10 +81,10 @@ const Register = () => {
               <div className="line-10"></div>
               <div className="sign-in-with">hoặc đăng ký với</div>
             </div>
-            <button className="button-secondary">
-              <img className="google" src="group0.svg" alt="Google icon" />
-              Đăng ký với google
-            </button>
+            <div className="button-secondary">
+              <div className="google-logo"></div>
+              <p>Đăng ký với Google</p>
+            </div>
           </div>
           <div className="login-link">
             Bạn đã có tài khoản?{" "}

@@ -23,6 +23,14 @@
     margin-bottom: 24px;
 }
 
+.login-logo {
+    background-image: url('../../img/logo2.png');
+    background-size: contain;
+    /* background-color: #ff005c; */
+    width: 200px;
+    height: 200px;
+}
+
 .input-section {
     width: 100%;
     display: flex;
@@ -142,6 +150,23 @@
     width: 24px;
     height: 24px;
     margin-right: 8px;
+}
+
+.google-logo {
+    background-image: url('../../img/google.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1000;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.button-secondary p {
+    justify-self: center;
+    margin: 0;
+
 }
 
 .create-account {

@@ -1,22 +1,33 @@
-.overview-container{
+/* Styles for the overview container and research title */
+.service-heading {
+    margin: 10px 0;
+}
+
+.service-content {
     display: flex;
-    
+    flex-direction: column;
+    padding: 10px;
 }
 
-.titles{
-    color: #000;
-    font-family: "Inter-Bold";
-    font-size: 34px;
-}
-
-.content-doc{
-    display: block;
-}
-
-.ngang{
+.service-graph {
+    width: 100%;
     display: flex;
-    flex-direction: row; /* Sắp xếp các phần tử theo hàng ngang */
-    justify-content: space-between; /* Khoảng cách đều giữa các phần tử */
-    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
-    gap: 50px; /* Khoảng cách giữa các phần tử, tùy chỉnh theo nhu cầu */
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-service-button {
+    background-color: rgba(255, 99, 104, 0.5);
+    color: white;
+    font-family: "Inter-Bold", sans-serif;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 150px;
+    border: 2px solid rgba(255, 99, 104, 0.5);
+}
+
+.upload-service-button:hover {
+    background-color: rgba(255, 99, 104, 0.5);
 }
